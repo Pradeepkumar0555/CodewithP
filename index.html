@@ -1,2181 +1,1441 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Happy Ganesh Chaturthi! 🐘✨ Divine Wishes & Stage Lighting Experience</title>
-
-  <!-- Meta tags for rich social previews -->
-  <meta name="description" content="Celebrate Ganesh Chaturthi with a spectacular divine lighting experience, interactive Aarti, temple bells, and personalized festive blessings! Ganpati Bappa Morya! 🙏✨">
-  <meta name="theme-color" content="#12051f">
-  <meta property="og:title" content="Happy Ganesh Chaturthi! 🐘✨ Ganpati Bappa Morya">
-  <meta property="og:description" content="Experience divine stage lighting, interactive Aarti, temple bells, and customized festive blessings for your loved ones.">
-  <meta property="og:url" content="https://pradeepkumar0555.github.io/ganesh-utsav/">
-  <meta property="og:image" content="https://pradeepkumar0555.github.io/ganesh-utsav/ganesha.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="1024">
-  <meta property="og:type" content="website">
+  <title>I am So Sorry Anjali ❤️ | Mera Pyara Sa Bacha</title>
+  <meta name="description" content="A special heartfelt apology for Anjali - 1000 times sorry from the bottom of my heart.">
+  <meta name="theme-color" content="#ff4d6d">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Short+Stack&display=swap" rel="stylesheet">
 
   <style>
-    /* ==========================================================================
-       ROYAL TEMPLE & FESTIVAL STAGE LIGHTING THEME
-       ========================================================================== */
     :root {
-      --bg-dark: #090310;
-      --bg-card: rgba(22, 10, 36, 0.72);
-      --bg-card-hover: rgba(32, 16, 52, 0.85);
-
-      --gold-primary: #f5b324;
-      --gold-bright: #ffe066;
-      --gold-deep: #b37400;
-      --gold-glow: rgba(245, 179, 36, 0.5);
-
-      --saffron: #ff6b1a;
-      --saffron-glow: rgba(255, 107, 26, 0.45);
-
-      --maroon-royal: #5c0919;
-      --crimson: #d90429;
-      --amber: #ffaa00;
-
-      --text-main: #fbf5ee;
-      --text-muted: #cdb9d6;
-      --text-gold: #ffdf85;
-
-      --glass-border: rgba(245, 179, 36, 0.3);
-      --glass-border-bright: rgba(255, 224, 102, 0.65);
-      --glass-shadow: 0 15px 45px rgba(0, 0, 0, 0.7), 0 0 30px rgba(245, 179, 36, 0.15);
-
-      --font-devanagari: 'Rozha One', 'Yatra One', serif;
-      --font-display: 'Cinzel Decorative', 'Rozha One', Georgia, serif;
-      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-
-      --radius-card: 24px;
-      --radius-btn: 50px;
+      --primary: #ff4d6d;
+      --primary-dark: #c9184a;
+      --primary-light: #ff758f;
+      --soft-pink: #fff0f3;
+      --bg-cream: #fff8f9;
+      --card-bg: rgba(255, 255, 255, 0.88);
+      --card-border: rgba(255, 117, 143, 0.25);
+      --text-dark: #2b1118;
+      --text-muted: #6e4a52;
+      --gold: #f59e0b;
+      --shadow-sm: 0 4px 15px rgba(255, 77, 109, 0.12);
+      --shadow-lg: 0 16px 36px rgba(255, 77, 109, 0.2);
     }
 
-    /* ==========================================================================
-       RESET & BASE STYLES
-       ========================================================================== */
-    *, *::before, *::after {
-      box-sizing: border-box;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       -webkit-tap-highlight-color: transparent;
     }
 
-    html, body {
-      width: 100%;
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(135deg, #fff0f3 0%, #ffccd5 50%, #fff0f3 100%);
+      color: var(--text-dark);
       min-height: 100vh;
-      background-color: var(--bg-dark);
-      font-family: var(--font-sans);
-      color: var(--text-main);
       overflow-x: hidden;
       position: relative;
     }
 
-    /* Ambient dynamic stage glow backdrop */
-    .stage-ambient {
+    /* Floating Canvas Background */
+    #heartCanvas {
       position: fixed;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
       z-index: 0;
-      background: radial-gradient(circle at 50% 20%, rgba(255, 107, 26, 0.18) 0%, rgba(138, 43, 226, 0.12) 40%, rgba(9, 3, 16, 0.95) 85%);
-      transition: background 1.2s ease;
     }
 
-    /* The Video Lighting Canvas (Moving Volumetric Stage Beams & Particles) */
-    #lightingCanvas {
-      position: fixed;
-      inset: 0;
+    /* Container */
+    .container {
       width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-      mix-blend-mode: screen;
-    }
-
-    /* Floating Confetti / Petals / Modak Canvas */
-    #fxCanvas {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 90;
-    }
-
-    /* Page Layout Container */
-    .app-container {
-      position: relative;
-      z-index: 10;
-      max-width: 1120px;
+      max-width: 780px;
       margin: 0 auto;
-      padding: 16px 20px 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 24px 16px 80px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* ==========================================================================
-       HEADER & TOP CONTROLS BAR
-       ========================================================================== */
-    .top-bar {
-      width: 100%;
+    /* Floating Music & Theme Bar */
+    .top-controls {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
       margin-bottom: 24px;
-      background: rgba(22, 10, 36, 0.65);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius-btn);
-      box-shadow: var(--glass-shadow);
-      flex-wrap: wrap;
-      gap: 12px;
     }
 
-    .top-badge {
-      display: flex;
+    .pill-badge {
+      display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      color: var(--gold-bright);
-      text-transform: uppercase;
-    }
-
-    .badge-icon {
-      font-size: 1.2rem;
-      animation: pulseOm 2s infinite ease-in-out;
-    }
-
-    @keyframes pulseOm {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px var(--gold-primary)); }
-      50% { transform: scale(1.15); filter: drop-shadow(0 0 12px var(--gold-bright)); }
-    }
-
-    .top-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .icon-btn {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(245, 179, 36, 0.35);
-      color: var(--gold-bright);
-      padding: 8px 14px;
-      border-radius: var(--radius-btn);
-      cursor: pointer;
-      font-size: 0.85rem;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.3s ease;
-      user-select: none;
-    }
-
-    .icon-btn:hover {
-      background: rgba(245, 179, 36, 0.22);
-      border-color: var(--gold-bright);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px var(--gold-glow);
-    }
-
-    .icon-btn.active {
-      background: linear-gradient(135deg, var(--gold-primary), var(--saffron));
-      color: #0d0417;
-      border-color: var(--gold-bright);
-      box-shadow: 0 0 18px var(--gold-glow);
-    }
-
-    /* Sound Visualizer Bars */
-    .audio-visualizer {
-      display: flex;
-      align-items: flex-end;
-      gap: 3px;
-      height: 14px;
-    }
-
-    .audio-visualizer span {
-      width: 3px;
-      background: var(--gold-bright);
-      border-radius: 2px;
-      height: 4px;
-      transition: height 0.15s ease;
-    }
-
-    .playing .audio-visualizer span:nth-child(1) { animation: soundBar 0.6s infinite ease alternate; }
-    .playing .audio-visualizer span:nth-child(2) { animation: soundBar 0.8s infinite 0.2s ease alternate; }
-    .playing .audio-visualizer span:nth-child(3) { animation: soundBar 0.5s infinite 0.4s ease alternate; }
-
-    @keyframes soundBar {
-      0% { height: 3px; }
-      100% { height: 14px; }
-    }
-
-    /* ==========================================================================
-       STAGE LIGHTING CONTROLLER BAR
-       ========================================================================== */
-    .lighting-control-bar {
-      width: 100%;
-      background: rgba(18, 7, 32, 0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(245, 179, 36, 0.25);
-      border-radius: var(--radius-card);
-      padding: 14px 20px;
-      margin-bottom: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-    }
-
-    .lighting-bar-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px 18px;
+      border-radius: 50px;
       font-size: 0.85rem;
       font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      color: var(--text-gold);
+      color: var(--primary-dark);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--card-border);
+      animation: gentlePulse 2s infinite ease-in-out;
     }
 
-    .lighting-presets {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .preset-pill {
-      flex: 1 1 calc(25% - 10px);
-      min-width: 130px;
-      padding: 10px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
+    .music-btn {
+      background: white;
+      border: 1px solid var(--card-border);
+      color: var(--primary-dark);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 7px;
-      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-
-    .preset-pill:hover {
-      background: rgba(245, 179, 36, 0.15);
-      border-color: var(--gold-primary);
-      color: #fff;
-    }
-
-    .preset-pill.active {
-      background: linear-gradient(135deg, rgba(245, 179, 36, 0.25), rgba(255, 107, 26, 0.3));
-      border-color: var(--gold-bright);
-      color: var(--gold-bright);
-      box-shadow: 0 0 20px rgba(245, 179, 36, 0.35);
-      transform: scale(1.02);
-    }
-
-    .lighting-sliders {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: center;
-      padding-top: 6px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .slider-group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex: 1 1 220px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .slider-group label {
-      white-space: nowrap;
-      font-weight: 600;
-    }
-
-    .slider-group input[type="range"] {
-      flex: 1;
-      accent-color: var(--gold-bright);
+      font-size: 1.2rem;
       cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .music-btn:hover {
+      transform: scale(1.1) rotate(10deg);
+      background: var(--soft-pink);
+    }
+    .music-btn.playing {
+      background: var(--primary);
+      color: white;
+      animation: spinSlow 6s linear infinite;
     }
 
-    /* ==========================================================================
-       HERO FESTIVAL GREETING & PERSONALIZATION
-       ========================================================================== */
-    .hero-greeting {
+    /* Hero Card */
+    .hero-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 28px;
+      padding: 38px 24px 30px;
       text-align: center;
-      margin-bottom: 24px;
-      max-width: 800px;
-    }
-
-    .sacred-callout {
-      display: inline-block;
-      font-family: var(--font-devanagari);
-      font-size: 1.5rem;
-      letter-spacing: 2px;
-      color: var(--saffron);
-      text-shadow: 0 0 20px var(--saffron-glow);
-      margin-bottom: 8px;
-      animation: divineGlow 3s infinite alternate;
-    }
-
-    @keyframes divineGlow {
-      from { text-shadow: 0 0 10px rgba(255, 107, 26, 0.4); }
-      to { text-shadow: 0 0 25px rgba(255, 224, 102, 0.8), 0 0 45px rgba(255, 107, 26, 0.6); }
-    }
-
-    .main-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.15;
-      background: linear-gradient(135deg, #ffffff 0%, #fff2be 30%, #f5b324 70%, #ff8c00 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 4px 18px rgba(245, 179, 36, 0.4));
-      margin-bottom: 12px;
-    }
-
-    .personalized-box {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(245, 179, 36, 0.12);
-      border: 1px solid var(--glass-border-bright);
-      padding: 8px 24px;
-      border-radius: var(--radius-btn);
-      margin-bottom: 16px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 0 25px rgba(245, 179, 36, 0.2);
-    }
-
-    .personalized-name {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--gold-bright);
-    }
-
-    .festive-subquote {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      max-width: 650px;
-      margin: 0 auto;
-    }
-
-    /* ==========================================================================
-       MAIN DARSHAN STAGE & GANESHA SHRINE
-       ========================================================================== */
-    .shrine-container {
-      width: 100%;
-      max-width: 680px;
-      margin: 10px auto 36px;
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-lg);
       position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Hanging brass bells on the sides */
-    .hanging-bells {
-      position: absolute;
-      top: -30px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 10px;
-      pointer-events: auto;
-      z-index: 25;
-    }
-
-    .hanging-bell-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-      transform-origin: top center;
-      transition: transform 0.2s ease;
-    }
-
-    .hanging-bell-wrapper:hover {
-      transform: scale(1.08);
-    }
-
-    .hanging-bell-chain {
-      width: 3px;
-      height: 55px;
-      background: repeating-linear-gradient(to bottom, #d4af37, #d4af37 4px, #5c4308 4px, #5c4308 8px);
-      box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
-    }
-
-    .brass-bell {
-      font-size: 2.2rem;
-      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 10px rgba(245, 179, 36, 0.6));
-      transform-origin: top center;
-      animation: bellSway 4s infinite ease-in-out;
-    }
-
-    .hanging-bell-wrapper.ringing .brass-bell {
-      animation: bellRing 0.7s infinite ease-in-out;
-    }
-
-    @keyframes bellSway {
-      0%, 100% { transform: rotate(0deg); }
-      25% { transform: rotate(4deg); }
-      75% { transform: rotate(-4deg); }
-    }
-
-    @keyframes bellRing {
-      0%, 100% { transform: rotate(0deg); }
-      25% { transform: rotate(22deg) scale(1.1); }
-      50% { transform: rotate(-22deg) scale(1.1); }
-      75% { transform: rotate(14deg); }
-    }
-
-    /* Rotating Divine Sun Aura behind Bappa */
-    .divine-aura-halo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 125%;
-      height: 125%;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(circle, rgba(255, 170, 0, 0.35) 0%, rgba(255, 107, 26, 0.2) 40%, rgba(255, 215, 0, 0.05) 65%, transparent 75%);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 2;
-      animation: auraPulse 6s infinite ease-in-out alternate;
-    }
-
-    @keyframes auraPulse {
-      0% { transform: translate(-50%, -50%) scale(0.92); opacity: 0.7; }
-      100% { transform: translate(-50%, -50%) scale(1.12); opacity: 1; filter: drop-shadow(0 0 50px rgba(245, 179, 36, 0.6)); }
-    }
-
-    /* The Main Shrine Frame */
-    .shrine-frame {
-      position: relative;
-      z-index: 5;
-      width: 100%;
-      border-radius: 32px;
-      background: linear-gradient(145deg, rgba(40, 18, 65, 0.85), rgba(15, 6, 26, 0.95));
-      border: 2px solid var(--gold-primary);
-      padding: 12px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(245, 179, 36, 0.3), inset 0 0 25px rgba(245, 179, 36, 0.15);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
       overflow: hidden;
+      margin-bottom: 30px;
     }
 
-    .shrine-frame:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 30px 75px rgba(0, 0, 0, 0.9), 0 0 55px rgba(245, 179, 36, 0.45);
-    }
-
-    /* Image Wrapper with Stage Spotlight Effect */
-    .ganesha-image-box {
-      position: relative;
-      width: 100%;
-      border-radius: 24px;
-      overflow: hidden;
-      aspect-ratio: 1 / 1;
-      background: #000;
-    }
-
-    .ganesha-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s ease;
-    }
-
-    .ganesha-image-box:hover .ganesha-img {
-      transform: scale(1.03);
-    }
-
-    /* Cinematic Stage Lighting Vignette Overlay */
-    .stage-vignette {
+    .hero-card::before {
+      content: '';
       position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: radial-gradient(circle at 50% 30%, transparent 45%, rgba(10, 3, 16, 0.5) 80%, rgba(9, 3, 15, 0.85) 100%),
-                  linear-gradient(to top, rgba(9, 3, 15, 0.9) 0%, transparent 30%);
-    }
-
-    /* Aarti Thali Overlay in Shrine */
-    .aarti-orbit-layer {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 20;
-    }
-
-    .aarti-thali {
-      position: absolute;
-      bottom: 25px;
+      top: -60px;
       left: 50%;
       transform: translateX(-50%);
-      width: 110px;
-      height: 110px;
-      pointer-events: auto;
-      cursor: grab;
+      width: 200px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(255, 77, 109, 0.35) 0%, transparent 70%);
+      filter: blur(20px);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff4d6d, #c9184a);
+      color: white;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(201, 24, 74, 0.3);
+    }
+
+    .hero-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(3.2rem, 9vw, 4.8rem);
+      color: var(--primary-dark);
+      line-height: 1.1;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(255, 77, 109, 0.15);
+    }
+
+    .hero-name {
+      font-size: clamp(1.4rem, 4vw, 1.9rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
-      background: radial-gradient(circle, #ffe066 10%, #d4af37 55%, #8c6d1f 100%);
-      border: 3px solid #fff;
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 10px 25px rgba(0, 0, 0, 0.7);
-      transition: box-shadow 0.3s ease;
-      user-select: none;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .aarti-thali.active-aarti {
-      animation: aartiCircularMotion 4s infinite linear;
-      box-shadow: 0 0 50px rgba(255, 140, 0, 0.95), 0 0 80px rgba(255, 224, 102, 0.8);
+    .hero-name .highlight {
+      background: linear-gradient(120deg, #ff4d6d, #ff758f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: underline wavy var(--primary-light);
     }
 
-    @keyframes aartiCircularMotion {
-      0% { transform: translate(-50%, 0) rotate(0deg); }
-      25% { transform: translate(calc(-50% + 90px), -45px) rotate(90deg); }
-      50% { transform: translate(-50%, -90px) rotate(180deg); }
-      75% { transform: translate(calc(-50% - 90px), -45px) rotate(270deg); }
-      100% { transform: translate(-50%, 0) rotate(360deg); }
-    }
-
-    .thali-flame {
-      width: 22px;
-      height: 34px;
-      background: radial-gradient(ellipse at 50% 80%, #ffffff 0%, #ffea00 30%, #ff5500 75%, transparent 100%);
-      border-radius: 50% 50% 20% 20%;
-      animation: flameFlicker 0.12s infinite alternate ease-in-out;
-      filter: drop-shadow(0 0 14px #ff7700) drop-shadow(0 0 25px #ffcc00);
-    }
-
-    @keyframes flameFlicker {
-      0% { transform: scale(0.95, 1.05) rotate(-2deg); }
-      100% { transform: scale(1.08, 0.96) rotate(3deg); }
-    }
-
-    .thali-flowers {
-      position: absolute;
-      font-size: 0.9rem;
-      inset: 0;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      pointer-events: none;
-    }
-
-    /* ==========================================================================
-       DEVOTIONAL RITUAL ACTION BUTTONS
-       ========================================================================== */
-    .ritual-toolbar {
-      width: 100%;
-      max-width: 680px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
-      margin-bottom: 30px;
-    }
-
-    .ritual-btn {
-      background: linear-gradient(145deg, rgba(38, 16, 60, 0.8), rgba(20, 8, 32, 0.9));
-      border: 1px solid var(--glass-border);
-      border-radius: 18px;
-      padding: 14px 10px;
-      color: var(--text-main);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.85rem;
-      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-      user-select: none;
-    }
-
-    .ritual-btn:hover {
-      background: linear-gradient(145deg, rgba(62, 26, 95, 0.9), rgba(30, 12, 48, 0.95));
-      border-color: var(--gold-bright);
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 10px 25px var(--gold-glow);
-    }
-
-    .ritual-btn:active {
-      transform: translateY(0) scale(0.98);
-    }
-
-    .ritual-icon {
-      font-size: 1.8rem;
-      filter: drop-shadow(0 2px 8px rgba(245, 179, 36, 0.4));
-    }
-
-    .ritual-label {
-      color: var(--gold-bright);
-      font-size: 0.85rem;
-    }
-
-    .ritual-subtext {
-      font-size: 0.72rem;
+    .hero-tagline {
+      font-family: 'Caveat', cursive;
+      font-size: 1.45rem;
       color: var(--text-muted);
+      line-height: 1.4;
+      max-width: 580px;
+      margin: 0 auto 20px;
     }
 
-    /* ==========================================================================
-       SACRED SHLOKA CARD (VAKRATUNDA MAHAKAYA)
-       ========================================================================== */
-    .shloka-card {
-      width: 100%;
-      max-width: 680px;
-      background: rgba(24, 10, 38, 0.75);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius-card);
-      padding: 22px 26px;
-      margin-bottom: 30px;
+    .confession-box {
+      background: rgba(255, 240, 243, 0.95);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 14px;
+      text-align: left;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #4a212b;
+      margin-top: 18px;
+      box-shadow: inset 0 2px 8px rgba(255, 77, 109, 0.05);
+    }
+
+    .confession-box strong {
+      color: var(--primary-dark);
+    }
+
+    /* 1000 Sorries Interactive Section */
+    .section-card {
+      background: var(--card-bg);
       backdrop-filter: blur(12px);
-      text-align: center;
-      box-shadow: var(--glass-shadow);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 30px 22px;
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 30px;
       position: relative;
     }
 
-    .shloka-title {
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--saffron);
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .shloka-sanskrit {
-      font-family: var(--font-devanagari);
-      font-size: 1.35rem;
-      line-height: 1.7;
-      color: var(--gold-bright);
-      text-shadow: 0 0 15px rgba(245, 179, 36, 0.35);
-      margin-bottom: 10px;
-    }
-
-    .shloka-english {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      font-style: italic;
-      line-height: 1.55;
-    }
-
-    .shloka-chant-btn {
-      margin-top: 14px;
-      background: rgba(245, 179, 36, 0.15);
-      border: 1px solid var(--gold-primary);
-      color: var(--gold-bright);
-      padding: 6px 18px;
-      border-radius: var(--radius-btn);
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.3s;
-    }
-
-    .shloka-chant-btn:hover {
-      background: var(--gold-primary);
-      color: #0d0417;
-      box-shadow: 0 0 15px var(--gold-glow);
-    }
-
-    /* ==========================================================================
-       8 DIVINE BLESSINGS OF LORD GANESHA (ASHTA VINAYAKA BLESSINGS)
-       ========================================================================== */
-    .blessings-section {
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 36px;
-    }
-
-    .section-headline {
+    .section-header {
       text-align: center;
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      color: var(--gold-bright);
-      margin-bottom: 8px;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      font-size: 0.92rem;
-      color: var(--text-muted);
       margin-bottom: 22px;
     }
 
-    .blessings-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 14px;
+    .section-header h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
 
-    .blessing-card {
-      background: rgba(20, 8, 34, 0.65);
-      border: 1px solid rgba(245, 179, 36, 0.2);
+    .section-header p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* 1000 Sorry Meter */
+    .sorry-meter-box {
+      background: white;
+      border-radius: 20px;
+      padding: 24px 18px;
+      text-align: center;
+      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.03);
+      border: 1px solid rgba(255, 77, 109, 0.15);
+    }
+
+    .counter-display {
+      font-size: clamp(2.8rem, 8vw, 4rem);
+      font-weight: 900;
+      color: var(--primary-dark);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1;
+      margin-bottom: 4px;
+      letter-spacing: -1px;
+    }
+
+    .counter-label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 14px;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 14px;
+      background: #fce4ec;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #ff758f, #ff4d6d, #c9184a);
+      border-radius: 10px;
+      transition: width 0.15s ease-out;
+      box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+    }
+
+    .sorry-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff4d6d, #c9184a);
+      color: white;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(201, 24, 74, 0.35);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary-dark);
+      border: 1.5px solid var(--primary-light);
+    }
+    .btn-secondary:hover {
+      background: var(--soft-pink);
+      transform: translateY(-2px);
+    }
+
+    /* Live Sorry Bubble Stream */
+    .bubble-stream {
+      margin-top: 18px;
+      min-height: 52px;
+      padding: 10px 16px;
+      background: var(--soft-pink);
+      border-radius: 12px;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    /* Shayari Grid */
+    .shayari-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .shayari-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .shayari-card {
+      background: white;
       border-radius: 18px;
-      padding: 16px;
+      padding: 22px 18px;
+      border: 1px solid rgba(255, 117, 143, 0.2);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: transform 0.3s ease;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+      justify-content: space-between;
     }
 
-    .blessing-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .blessing-card:hover {
+    .shayari-card:hover {
       transform: translateY(-4px);
-      border-color: var(--gold-bright);
-      background: rgba(35, 14, 58, 0.85);
-      box-shadow: 0 10px 25px rgba(245, 179, 36, 0.2);
     }
 
-    .blessing-card:hover::before {
-      opacity: 1;
+    .shayari-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
     }
 
-    .blessing-icon {
-      font-size: 2rem;
+    .shayari-text {
+      font-family: 'Caveat', cursive;
+      font-size: 1.35rem;
+      line-height: 1.5;
+      color: #3b1821;
+      white-space: pre-line;
+      margin-bottom: 12px;
+    }
+
+    .shayari-sub {
+      font-size: 0.82rem;
+      color: #8a656d;
+      font-style: italic;
+      text-align: right;
+    }
+
+    /* Jokes & Masti Cards */
+    .joke-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 20px 18px;
+      border-left: 5px solid #f59e0b;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .joke-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #92400e;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       margin-bottom: 8px;
     }
 
-    .blessing-name {
+    .joke-card p {
+      font-size: 0.94rem;
+      line-height: 1.6;
+      color: #4b321a;
+    }
+
+    /* Why I Am An Idiot Checklist */
+    .checklist {
+      list-style: none;
+      margin-top: 14px;
+    }
+    .checklist li {
+      padding: 10px 12px;
+      background: white;
+      margin-bottom: 8px;
+      border-radius: 12px;
+      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      border: 1px solid rgba(255, 77, 109, 0.1);
+    }
+    .checklist-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    /* Love Coupons */
+    .coupons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .coupon-card {
+      background: linear-gradient(135deg, #fff5f7, #ffffff);
+      border: 2px dashed var(--primary-light);
+      border-radius: 16px;
+      padding: 18px 14px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .coupon-card:hover {
+      transform: scale(1.03);
+      border-color: var(--primary);
+      background: #ffe3e8;
+    }
+
+    .coupon-card.redeemed {
+      background: #e8f5e9;
+      border-color: #4caf50;
+    }
+
+    .coupon-emoji {
+      font-size: 2rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .coupon-title {
       font-weight: 700;
-      font-size: 1rem;
-      color: var(--gold-bright);
+      font-size: 0.95rem;
+      color: var(--text-dark);
       margin-bottom: 4px;
     }
 
-    .blessing-desc {
+    .coupon-desc {
       font-size: 0.8rem;
       color: var(--text-muted);
-      line-height: 1.45;
     }
 
-    /* ==========================================================================
-       WHATSAPP SHARE & CUSTOMIZE MODAL
-       ========================================================================== */
-    .share-dock {
-      position: fixed;
-      bottom: 20px;
-      z-index: 80;
+    .coupon-status {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      text-transform: uppercase;
+      background: white;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    /* Final Forgiveness Interactive Arena */
+    .forgiveness-box {
+      text-align: center;
+      background: linear-gradient(135deg, #ffffff 0%, #fff0f3 100%);
+      border: 2px solid var(--primary-light);
+      border-radius: 26px;
+      padding: 36px 20px;
+      box-shadow: var(--shadow-lg);
+      margin-top: 36px;
+      position: relative;
+      min-height: 280px;
       display: flex;
-      gap: 12px;
-      background: rgba(14, 5, 24, 0.85);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--glass-border-bright);
-      padding: 8px 16px;
-      border-radius: var(--radius-btn);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 179, 36, 0.3);
-    }
-
-    .whatsapp-btn {
-      background: linear-gradient(135deg, #25d366, #128c7e);
-      color: #fff;
-      font-weight: 700;
-      padding: 10px 22px;
-      border-radius: var(--radius-btn);
-      border: none;
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      transition: all 0.3s;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    }
-
-    .whatsapp-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-    }
-
-    .customize-btn {
-      background: linear-gradient(135deg, var(--gold-primary), var(--saffron));
-      color: #0c0416;
-      font-weight: 700;
-      padding: 10px 20px;
-      border-radius: var(--radius-btn);
-      border: none;
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: 0 4px 15px var(--gold-glow);
-    }
-
-    .customize-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 22px rgba(245, 179, 36, 0.6);
-    }
-
-    /* Modal Backdrop & Dialog */
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(5, 2, 9, 0.85);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 20px;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
     }
 
-    .modal-backdrop.open {
-      opacity: 1;
-      pointer-events: auto;
+    .forgiveness-box h3 {
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 8px;
     }
 
-    .modal-box {
-      background: linear-gradient(145deg, #200d34, #10051d);
-      border: 2px solid var(--gold-primary);
-      border-radius: 28px;
-      padding: 28px;
+    .forgiveness-box p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      max-width: 460px;
+    }
+
+    .decision-buttons {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
       width: 100%;
-      max-width: 480px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px var(--gold-glow);
-      transform: scale(0.9);
-      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      min-height: 80px;
     }
 
-    .modal-backdrop.open .modal-box {
-      transform: scale(1);
+    .btn-yes {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      font-size: 1.15rem;
+      padding: 14px 34px;
+      border-radius: 50px;
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+      z-index: 2;
+    }
+
+    .btn-yes:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 28px rgba(16, 185, 129, 0.45);
+    }
+
+    .btn-no {
+      background: #f3f4f6;
+      color: #6b7280;
+      border: 1px solid #d1d5db;
+      font-size: 1rem;
+      padding: 14px 26px;
+      border-radius: 50px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    /* Modal for 1000 Sorries Book */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(43, 17, 24, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 16px;
+    }
+
+    .modal-content {
+      background: #ffffff;
+      width: 100%;
+      max-width: 620px;
+      height: 80vh;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+      animation: modalPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
     .modal-header {
+      padding: 18px 22px;
+      background: var(--soft-pink);
+      border-bottom: 1px solid var(--card-border);
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-bottom: 18px;
+      justify-content: space-between;
     }
 
-    .modal-title {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      color: var(--gold-bright);
+    .modal-header h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary-dark);
     }
 
     .modal-close {
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      font-size: 1.5rem;
+      background: white;
+      border: 1px solid var(--card-border);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.2rem;
       cursor: pointer;
-      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dark);
     }
 
     .modal-body {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .input-field {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .input-field label {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--text-gold);
-    }
-
-    .input-field input {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(245, 179, 36, 0.3);
-      padding: 10px 14px;
-      border-radius: 12px;
-      color: #fff;
-      font-family: inherit;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border 0.3s;
-    }
-
-    .input-field input:focus {
-      border-color: var(--gold-bright);
-      box-shadow: 0 0 10px var(--gold-glow);
-    }
-
-    /* Link Preview & 'Click Here' Badge */
-    .link-preview-card {
-      background: rgba(10, 4, 18, 0.6);
-      border: 1px dashed var(--gold-primary);
-      border-radius: 16px;
-      padding: 12px 14px;
-      margin-top: 4px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .link-preview-label {
-      font-size: 0.76rem;
-      font-weight: 700;
-      color: var(--gold-bright);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-    }
-
-    .preview-click-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, rgba(245, 179, 36, 0.2), rgba(255, 107, 26, 0.25));
-      border: 1px solid var(--gold-bright);
-      color: var(--gold-bright);
-      font-weight: 700;
-      font-size: 0.88rem;
-      padding: 8px 14px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      box-shadow: 0 0 15px rgba(245, 179, 36, 0.25);
-      transition: all 0.3s;
-      width: fit-content;
-    }
-
-    .preview-click-badge:hover {
-      background: linear-gradient(135deg, var(--gold-primary), var(--saffron));
-      color: #0d0417;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 20px var(--gold-glow);
-    }
-
-    .preview-url-sub {
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      word-break: break-all;
-      font-family: monospace;
-    }
-
-    .modal-footer {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .modal-btn {
+      padding: 16px 20px;
+      overflow-y: auto;
       flex: 1;
-      padding: 12px;
-      border-radius: var(--radius-btn);
-      border: none;
-      font-weight: 700;
-      cursor: pointer;
-      display: inline-flex;
+    }
+
+    .sorry-item {
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      background: #fff8f9;
+      border-radius: 12px;
+      border-left: 3px solid var(--primary-light);
+      font-size: 0.92rem;
+      line-height: 1.4;
+      display: flex;
+      gap: 10px;
+    }
+
+    .sorry-item .num {
+      font-weight: 800;
+      color: var(--primary);
+      min-width: 44px;
+    }
+
+    /* Success Celebration Overlay */
+    .success-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 240, 243, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: none;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      font-size: 0.9rem;
+      text-align: center;
+      z-index: 1000;
+      padding: 24px;
+      animation: fadeIn 0.4s ease;
     }
 
-    .modal-btn.primary {
-      background: linear-gradient(135deg, var(--gold-primary), var(--saffron));
-      color: #0c0416;
+    .success-card {
+      background: white;
+      max-width: 520px;
+      padding: 44px 28px;
+      border-radius: 32px;
+      box-shadow: var(--shadow-lg);
+      border: 2px solid var(--primary-light);
+      position: relative;
     }
 
-    .modal-btn.secondary {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
+    .success-card .big-heart {
+      font-size: 5rem;
+      display: block;
+      margin-bottom: 12px;
+      animation: heartBeat 1.2s infinite ease-in-out;
     }
 
-    /* Toast Notification */
-    .toast-msg {
-      position: fixed;
-      bottom: 90px;
-      left: 50%;
-      transform: translateX(-50%) translateY(30px);
-      background: #1f0b33;
-      border: 1px solid var(--gold-bright);
-      color: var(--gold-bright);
-      padding: 10px 24px;
-      border-radius: var(--radius-btn);
-      font-size: 0.9rem;
-      font-weight: 600;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s ease;
-      z-index: 110;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    .success-card h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.6rem;
+      color: var(--primary-dark);
+      line-height: 1;
+      margin-bottom: 10px;
     }
 
-    .toast-msg.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
+    .success-card p {
+      font-size: 1.05rem;
+      color: var(--text-dark);
+      line-height: 1.6;
+      margin-bottom: 24px;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      .app-container {
-        padding: 12px 14px 100px;
-      }
-      .preset-pill {
-        min-width: 110px;
-        font-size: 0.75rem;
-        padding: 8px 10px;
-      }
-      .hanging-bells {
-        top: -20px;
-      }
-      .hanging-bell-chain {
-        height: 35px;
-      }
-      .brass-bell {
-        font-size: 1.8rem;
-      }
-      .main-title {
-        font-size: 2rem;
-      }
-      .share-dock {
-        width: calc(100% - 30px);
-        justify-content: center;
-      }
+    /* Keyframe Animations */
+    @keyframes gentlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      20% { transform: scale(1.18); }
+      40% { transform: scale(1.08); }
+      60% { transform: scale(1.15); }
+      80% { transform: scale(1.03); }
+    }
+
+    @keyframes modalPop {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+    footer span {
+      color: var(--primary);
     }
   </style>
 </head>
-
 <body>
-  <!-- Ambient background glow -->
-  <div class="stage-ambient" id="stageAmbient"></div>
 
-  <!-- Dynamic Volumetric Video Lighting & Stage Spotlights Canvas -->
-  <canvas id="lightingCanvas"></canvas>
+  <!-- Background Heart Canvas -->
+  <canvas id="heartCanvas"></canvas>
 
-  <!-- Physics / Offerings Particle Effects Canvas -->
-  <canvas id="fxCanvas"></canvas>
-
-  <div class="app-container">
-    <!-- Top Bar with Auspicious Om Badge & Audio Visualizer -->
-    <header class="top-bar">
-      <div class="top-badge">
-        <span class="badge-icon">🕉️</span>
-        <span>श्री गणेशाय नमः</span>
+  <div class="container">
+    <!-- Top Action Bar -->
+    <div class="top-controls">
+      <div class="pill-badge">
+        <span>💌</span> Official Apology Letter
       </div>
-
-      <div class="top-actions">
-        <!-- Devotional Audio Toggle Button -->
-        <button class="icon-btn" id="audioToggleBtn" title="Toggle Temple Sound & Bells">
-          <div class="audio-visualizer">
-            <span></span><span></span><span></span>
-          </div>
-          <span id="audioBtnText">🔊 Temple Chimes</span>
-        </button>
-
-        <!-- Lighting Fog / Stage Lasers Toggle -->
-        <button class="icon-btn" id="fogToggleBtn" title="Toggle Volumetric Stage Beams">
-          <span>✨</span>
-          <span>Stage Beams: ON</span>
-        </button>
-      </div>
-    </header>
-
-    <!-- Stage Lighting & Concert Vibe Controller Bar -->
-    <div class="lighting-control-bar">
-      <div class="lighting-bar-title">
-        <span>🎬 Video Lighting Preset</span>
-        <span id="activePresetName" style="color: var(--gold-bright);">🌟 Grand Temple Aarti</span>
-      </div>
-
-      <div class="lighting-presets">
-        <button class="preset-pill active" data-preset="aarti">
-          <span>🪔</span> Grand Aarti
-        </button>
-        <button class="preset-pill" data-preset="visarjan">
-          <span>🎆</span> Dhol Stage Lights
-        </button>
-        <button class="preset-pill" data-preset="cosmic">
-          <span>🌌</span> Cosmic Darshan
-        </button>
-        <button class="preset-pill" data-preset="sunrise">
-          <span>🌅</span> Sunrise Murti
-        </button>
-      </div>
-
-      <div class="lighting-sliders">
-        <div class="slider-group">
-          <label for="beamSpeed">Beam Speed:</label>
-          <input type="range" id="beamSpeed" min="0.2" max="2.5" step="0.1" value="1.0">
-        </div>
-        <div class="slider-group">
-          <label for="beamIntensity">Light Glow:</label>
-          <input type="range" id="beamIntensity" min="0.3" max="1.0" step="0.05" value="0.85">
-        </div>
-      </div>
+      <button class="music-btn" id="musicToggle" title="Play soothing romantic melody">
+        🎵
+      </button>
     </div>
 
-    <!-- Hero Greeting & Recipient Header -->
-    <div class="hero-greeting">
-      <div class="sacred-callout">॥ गणपति बप्पा मोरया ॥</div>
-      <h1 class="main-title">Happy Ganesh Chaturthi</h1>
-
-      <div class="personalized-box" id="personalizedBox">
-        <span>✨</span>
-        <span class="personalized-name" id="displayRecipient">Wishing You & Your Family</span>
-        <span>✨</span>
+    <!-- Hero Card -->
+    <div class="hero-card">
+      <span class="hero-badge">A Heartfelt Confession</span>
+      <h1 class="hero-title">I Am Truly Sorry</h1>
+      <div class="hero-name">
+        To My Sweetheart <span class="highlight">Anjali</span> ❤️
       </div>
-
-      <p class="festive-subquote" id="displaySenderText">
-        May Lord Ganesha remove all obstacles from your path and bless your home with boundless prosperity, supreme wisdom, good health, and eternal peace!
+      <p class="hero-tagline">
+        "Mera pyara sa bacha ho tum... tum par bina wajah gussa karke maine duniya ki sabse badi galti kar di."
       </p>
-    </div>
 
-    <!-- Main Shrine & Lord Ganesha Darshan -->
-    <div class="shrine-container">
-      <!-- Hanging temple brass bells that swing & ring on tap -->
-      <div class="hanging-bells">
-        <div class="hanging-bell-wrapper" id="bellLeft" title="Tap to ring temple bell">
-          <div class="hanging-bell-chain"></div>
-          <div class="brass-bell">🔔</div>
-        </div>
-        <div class="hanging-bell-wrapper" id="bellRight" title="Tap to ring temple bell">
-          <div class="hanging-bell-chain"></div>
-          <div class="brass-bell">🔔</div>
-        </div>
-      </div>
-
-      <!-- Radiant Divine Aura behind Lord Ganesha -->
-      <div class="divine-aura-halo" id="divineHalo"></div>
-
-      <!-- Royal Golden Shrine Frame -->
-      <div class="shrine-frame" id="shrineFrame">
-        <div class="ganesha-image-box">
-          <img src="ganesha.jpg" alt="Bhagwan Shri Ganesha in Divine Festive Lighting" class="ganesha-img" id="ganeshaImg">
-          <div class="stage-vignette"></div>
-
-          <!-- Interactive Aarti Thali layer -->
-          <div class="aarti-orbit-layer">
-            <div class="aarti-thali" id="aartiThali" title="Click or Tap 'Perform Aarti' to orbit flame around Bappa">
-              <div class="thali-flame"></div>
-              <div class="thali-flowers">
-                <span>🌺</span>
-                <span>🌼</span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="confession-box">
+        <strong>Meri Jaan Anjali,</strong><br>
+        Kal maine bina kisi baat ke, bina kisi wajah ke tum par faltu me gussa nikal diya. Us waqt mera dimag bilkul kharab tha, par iska matlab ye bilkul nahi tha ki tumhari koi galti thi. You didn't deserve that at all. Tum meri sabse pyari khushi ho, mera pyara sa bacha ho, aur maine tumhe hurt kar diya... I feel so terribly guilty. Dil se bohot bohot sorry! 🥺💔
       </div>
     </div>
 
-    <!-- Devotional Ritual Actions -->
-    <div class="ritual-toolbar">
-      <button class="ritual-btn" id="btnAarti">
-        <span class="ritual-icon">🪔</span>
-        <span class="ritual-label">Perform Aarti</span>
-        <span class="ritual-subtext">Orbit Flame & Bells</span>
-      </button>
+    <!-- 1000 Sorries Section -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2><span>🙏</span> The 1000 Times Sorry Machine</h2>
+        <p>Ek do baar nahi, tumhare liye pure 1000 heartfelt sorries!</p>
+      </div>
 
-      <button class="ritual-btn" id="btnModak">
-        <span class="ritual-icon">🥟</span>
-        <span class="ritual-label">Offer Modak</span>
-        <span class="ritual-subtext">Bappa's Favourite</span>
-      </button>
+      <div class="sorry-meter-box">
+        <div class="counter-display" id="sorryCounter">0</div>
+        <div class="counter-label">Sorries Sent to Anjali</div>
 
-      <button class="ritual-btn" id="btnFlowers">
-        <span class="ritual-icon">🌺</span>
-        <span class="ritual-label">Shower Flowers</span>
-        <span class="ritual-subtext">Hibiscus Petals</span>
-      </button>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
 
-      <button class="ritual-btn" id="btnCoconut">
-        <span class="ritual-icon">🥥</span>
-        <span class="ritual-label">Break Coconut</span>
-        <span class="ritual-subtext">Auspicious Blessings</span>
-      </button>
+        <div class="sorry-actions">
+          <button class="btn btn-primary" id="btnRapidSorry">
+            ⚡ Shower 1000 Sorries Right Now!
+          </button>
+          <button class="btn btn-secondary" id="btnManualSorry">
+            ➕ Send 1 By 1 (+1)
+          </button>
+          <button class="btn btn-secondary" id="btnOpenBook">
+            📖 Read All 1000 Sorries
+          </button>
+        </div>
 
-      <button class="ritual-btn" id="btnFireworks">
-        <span class="ritual-icon">🎆</span>
-        <span class="ritual-label">Festive Sparklers</span>
-        <span class="ritual-subtext">Celebration Burst</span>
-      </button>
+        <div class="bubble-stream" id="bubbleStream">
+          Click the button to shower your pyara sa bacha with love and sorries...
+        </div>
+      </div>
     </div>
 
-    <!-- Sacred Shloka Card -->
-    <div class="shloka-card">
-      <div class="shloka-title">Sacred Ganesha Shloka</div>
-      <div class="shloka-sanskrit">
-        वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>
-        निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+    <!-- Shayari Section -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2><span>🌹</span> Shayari Dil Se (Sirf Tumhare Liye)</h2>
+        <p>Gussa thoda kam karo aur ye lines padho meri jaan...</p>
       </div>
-      <div class="shloka-english">
-        "O Lord with the curved trunk and immense radiant aura equal to millions of suns, please remove every obstacle from all my noble undertakings forever."
+
+      <div class="shayari-grid">
+        <div class="shayari-card">
+          <span class="shayari-tag">Maafi Dil Se</span>
+          <p class="shayari-text">
+            "Gussa tera bilkul jayaz hai, 
+            galti poori meri thi...
+            Kal jo bina wajah chillaya, 
+            wo nadani meri thi...
+            Tu to meri jaan hai, mera pyara sa bacha,
+            Maaf kar de mujhe, 
+            tere bina ye saari khushiyan adhoori thi."
+          </p>
+          <span class="shayari-sub">— For My Anjali ❤️</span>
+        </div>
+
+        <div class="shayari-card">
+          <span class="shayari-tag">Maan Jao Na</span>
+          <p class="shayari-text">
+            "Ruthne ka poora haq hai tujhe, 
+            manane ka farz mera hai...
+            Tere chehre ki pyari si hasi par hi, 
+            to basera mera hai...
+            Galti ho gayi meri jaan, ab muskura bhi do,
+            Tujhse hi shuru aur tujhpe hi khatam, 
+            har sawera mera hai."
+          </p>
+          <span class="shayari-sub">— Tera Duffer 🙈</span>
+        </div>
+
+        <div class="shayari-card">
+          <span class="shayari-tag">Dhadkan Tum Ho</span>
+          <p class="shayari-text">
+            "Narazgi teri hume gawara nahi,
+            Tere siwa is dil ko koi pyara nahi...
+            Ek baar pyaar se gale laga lo bacha,
+            Tere bina is aashiq ka koi sahara nahi."
+          </p>
+          <span class="shayari-sub">— Infinite Love 💖</span>
+        </div>
+
+        <div class="shayari-card">
+          <span class="shayari-tag">Promise Of Love</span>
+          <p class="shayari-text">
+            "Wada hai ab gussa kabhi aane nahi dunga,
+            Tere pyare se chehre ki hasi jane nahi dunga...
+            Chahe kitni bhi mushkil kyu na ho zindagi me,
+            Tujhe kisi aur baat se ghamzada hone nahi dunga."
+          </p>
+          <span class="shayari-sub">— Pakka Promise 🤞</span>
+        </div>
       </div>
-      <button class="shloka-chant-btn" id="chantSpeechBtn">
-        <span>🎙️</span>
-        <span>Listen to Sacred Chant</span>
-      </button>
     </div>
 
-    <!-- 8 Divine Blessings of Lord Ganesha -->
-    <section class="blessings-section">
-      <h2 class="section-headline">Ashta Blessings of Bappa</h2>
-      <p class="section-subtitle">May the 8 divine attributes of Lord Ganesha enrich your journey</p>
+    <!-- Jokes & Cute Masti Section -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2><span>😂</span> Thodi Si Smile Toh Banti Hai</h2>
+        <p>Anjali ko gusse me cute lagne ka licence kisne diya?</p>
+      </div>
 
-      <div class="blessings-grid">
-        <div class="blessing-card">
-          <div class="blessing-icon">💡</div>
-          <div class="blessing-name">बुद्धि (Buddhi)</div>
-          <div class="blessing-desc">Supreme intellect, sharp wisdom, and sound clarity in every decision.</div>
+      <div class="joke-card">
+        <h4>📢 Breaking News from Boyfriend High Court</h4>
+        <p>
+          Kal ek dimaag se paidal ladke ne duniya ki sabse pyari ladki (Anjali) par bina kisi reason ke gussa dikha diya! Judge Sahiba (Anjali) ne faisla sunaya hai ki us ladke ko 1000 sorry bolne honge, lifetime chocolate deni hogi aur roz bolna hoga: <em>"Meri Anjali duniya ki sabse sweet ladki hai!"</em>
+        </p>
+      </div>
+
+      <div class="joke-card" style="border-left-color: #ec4899;">
+        <h4 style="color: #be185d;">🔬 Scientific Research Fact</h4>
+        <p>
+          NASA and Harvard researchers ne discover kiya hai ki jab Anjali gussa hoti hai to wo 200% zyada cute lagti hai... Lekin jab wo muskuraati hai, to uske samne chaand aur taare bhi feeke pad jaate hain! So please, ab thoda sa hass bhi do na bacha!
+        </p>
+      </div>
+
+      <div class="joke-card" style="border-left-color: #3b82f6;">
+        <h4 style="color: #1d4ed8;">🧾 Boyfreind Penalty Bill (Payable Immediately)</h4>
+        <p>
+          • Bina baat ka gussa charge: 1000 Sorries<br>
+          • Mood kharab karne ka tax: 1x Giant Ice Cream Treat<br>
+          • Pouting fine: 50 Cute Tight Hugs<br>
+          • <strong>Total Payable Amount:</strong> Bas ek pyari si 'Maan Gayi' wali smile! 😍
+        </p>
+      </div>
+
+      <h3 style="font-size: 1.15rem; font-weight: 700; margin: 20px 0 10px; color: var(--text-dark);">
+        5 Reasons Why I Am An Idiot (And You Are An Angel):
+      </h3>
+      <ul class="checklist">
+        <li>
+          <span class="checklist-icon">🤡</span>
+          <span><strong>Reason 1:</strong> Kal bina kisi baat ke gussa karke maine prove kar diya ki mera dimaag ghutne me hai!</span>
+        </li>
+        <li>
+          <span class="checklist-icon">👑</span>
+          <span><strong>Reason 2:</strong> Tum ek masoom pyari angel ho jo sirf pyaar deserve karti hai.</span>
+        </li>
+        <li>
+          <span class="checklist-icon">🧠</span>
+          <span><strong>Reason 3:</strong> Tum hamesha sahi hoti ho, aur mai hamesha dumber than a rock.</span>
+        </li>
+        <li>
+          <span class="checklist-icon">🥺</span>
+          <span><strong>Reason 4:</strong> Tumhe thoda sa bhi sad dekh kar meri jaan nikal jaati hai.</span>
+        </li>
+        <li>
+          <span class="checklist-icon">❤️</span>
+          <span><strong>Reason 5:</strong> I love you more than words, pizza, sleep and everything in this universe!</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Apology Love Coupons -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2><span>🎟️</span> Anjali's Peace Treaty Coupons</h2>
+        <p>Tap any coupon to redeem it instantly!</p>
+      </div>
+
+      <div class="coupons-grid">
+        <div class="coupon-card" onclick="redeemCoupon(this, 'Unlimited Hugs')">
+          <span class="coupon-emoji">🫂</span>
+          <div class="coupon-title">Tight Bear Hug</div>
+          <div class="coupon-desc">Jab tak bache ka gussa thanda na ho tab tak hug!</div>
+          <span class="coupon-status">Tap to Redeem</span>
         </div>
 
-        <div class="blessing-card">
-          <div class="blessing-icon">💎</div>
-          <div class="blessing-name">ऋद्धि (Riddhi)</div>
-          <div class="blessing-desc">Abundant prosperity, wealth, and continuous auspicious fortune.</div>
+        <div class="coupon-card" onclick="redeemCoupon(this, 'Ice Cream Date')">
+          <span class="coupon-emoji">🍨</span>
+          <div class="coupon-title">Favourite Ice Cream</div>
+          <div class="coupon-desc">Tumhari pasand ki ice cream + chocolate treat!</div>
+          <span class="coupon-status">Tap to Redeem</span>
         </div>
 
-        <div class="blessing-card">
-          <div class="blessing-icon">🎯</div>
-          <div class="blessing-name">सिद्धि (Siddhi)</div>
-          <div class="blessing-desc">Mastery, accomplishment, and glorious success in all endeavors.</div>
+        <div class="coupon-card" onclick="redeemCoupon(this, '24h Yes Man')">
+          <span class="coupon-emoji">🫡</span>
+          <div class="coupon-title">24-Hour Yes-Man</div>
+          <div class="coupon-desc">Pure 24 ghante tum jo kahogi, bina argument 'Yes'!</div>
+          <span class="coupon-status">Tap to Redeem</span>
         </div>
 
-        <div class="blessing-card">
-          <div class="blessing-icon">🌿</div>
-          <div class="blessing-name">आरोग्य (Arogya)</div>
-          <div class="blessing-desc">Vibrant health, longevity, and peaceful vitality for your loved ones.</div>
-        </div>
-
-        <div class="blessing-card">
-          <div class="blessing-icon">🛡️</div>
-          <div class="blessing-name">विघ्नहर्ता (Protection)</div>
-          <div class="blessing-desc">Dissolution of hardships, worries, and unforeseen hurdles.</div>
-        </div>
-
-        <div class="blessing-card">
-          <div class="blessing-icon">🕊️</div>
-          <div class="blessing-name">शांति (Shanti)</div>
-          <div class="blessing-desc">Inner serenity, blissful home environment, and calm mindfulness.</div>
-        </div>
-
-        <div class="blessing-card">
-          <div class="blessing-icon">👑</div>
-          <div class="blessing-name">सौभाग्य (Saubhagya)</div>
-          <div class="blessing-desc">Unending good luck, respect, and honorable social prosperity.</div>
-        </div>
-
-        <div class="blessing-card">
-          <div class="blessing-icon">✨</div>
-          <div class="blessing-name">आनंद (Ananda)</div>
-          <div class="blessing-desc">Celebratory joy, harmonious relationships, and sweet memories.</div>
+        <div class="coupon-card" onclick="redeemCoupon(this, 'Head Massage')">
+          <span class="coupon-emoji">💆‍♀️</span>
+          <div class="coupon-title">Princess Treatment</div>
+          <div class="coupon-desc">Champi, pampering aur unlimited compliments!</div>
+          <span class="coupon-status">Tap to Redeem</span>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Interactive Forgiveness Box -->
+    <div class="forgiveness-box" id="forgivenessBox">
+      <h3>Anjali, Maan Jao Na Please? 🥺❤️</h3>
+      <p>Mera pyara sa bacha, apne iss duffer ko maaf kar do na? Ab dobara aisa kabhi nahi hoga, promise!</p>
+
+      <div class="decision-buttons">
+        <button class="btn btn-yes" id="btnYes">
+          Haan, Maan Gayi! 🥰❤️
+        </button>
+        <button class="btn-no" id="btnNo">
+          Nahi, Abhi Bhi Gussa Hu! 😤
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      Crafted with infinite love, 1000 sorries & endless hugs for <span>Anjali</span>.<br>
+      You are my today, my tomorrow, and my entire life. ❤️
+    </footer>
   </div>
 
-  <!-- Bottom Floating Share Dock -->
-  <div class="share-dock">
-    <a href="#" class="whatsapp-btn" id="whatsappShareBtn" target="_blank" rel="noopener">
-      <span>💬</span> Share on WhatsApp
-    </a>
-    <button class="customize-btn" id="openCustomizeModalBtn">
-      <span>✍️</span> Customize Wish
-    </button>
-  </div>
-
-  <!-- Wish Customization Modal -->
-  <div class="modal-backdrop" id="customModal">
-    <div class="modal-box">
+  <!-- 1000 Sorries Modal -->
+  <div class="modal-overlay" id="sorryModal">
+    <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title">Customize Festive Greeting</h3>
-        <button class="modal-close" id="closeModalBtn">&times;</button>
+        <h3>📖 1000 Sorries For Anjali</h3>
+        <button class="modal-close" id="modalClose">&times;</button>
       </div>
-      <div class="modal-body">
-        <div class="input-field">
-          <label for="toInput">To (Recipient's Name or Family):</label>
-          <input type="text" id="toInput" placeholder="e.g. Rahul & Sharma Family">
-        </div>
-        <div class="input-field">
-          <label for="fromInput">From (Your Name / Family):</label>
-          <input type="text" id="fromInput" placeholder="e.g. Pradeep & Family">
-        </div>
-        <div class="input-field">
-          <label for="customMsgInput">Special Blessing Message:</label>
-          <input type="text" id="customMsgInput" placeholder="May Bappa fill your home with immense happiness...">
-        </div>
-        <div class="input-field">
-          <label for="customUrlInput">Custom Link or Short URL (Optional):</label>
-          <input type="text" id="customUrlInput" placeholder="e.g. https://tinyurl.com/... or leave blank">
-        </div>
-
-        <!-- Live 'Click Here' Link Preview -->
-        <div class="link-preview-card">
-          <div class="link-preview-label">How your wish link looks:</div>
-          <a href="#" id="previewClickHereLink" class="preview-click-badge" target="_blank">
-            👉 Click Here to Open Divine Darshan & Aarti ✨
-          </a>
-          <div class="preview-url-sub" id="previewUrlSub">Loading link...</div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button class="modal-btn secondary" id="copyClickHereBtn" title="Copies as a clean clickable 'Click Here' link">
-          <span>👉</span> Copy "Click Here" Link
-        </button>
-        <button class="modal-btn secondary" id="shortenUrlBtn" title="Auto-shorten using TinyURL">
-          <span>⚡</span> Shorten URL
-        </button>
-        <button class="modal-btn secondary" id="copyCustomLinkBtn">
-          <span>📋</span> Copy URL
-        </button>
-        <button class="modal-btn primary" id="applyCustomBtn">
-          <span>✨</span> Apply & Wish
-        </button>
+      <div class="modal-body" id="modalSorryList">
+        <!-- Generated dynamically -->
       </div>
     </div>
   </div>
 
-  <!-- Toast Notification Message -->
-  <div class="toast-msg" id="toastMsg">Link copied to clipboard!</div>
+  <!-- Success Celebration Overlay -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-card">
+      <span class="big-heart">💖</span>
+      <h2>Yay! Thank You Meri Jaan!</h2>
+      <p>
+        I love you so, so, so much Anjali! ❤️<br>
+        Thank you for forgiving your pyara sa duffer. You just made my entire world bright again! Ab jaldi se muskura do aur ek virtual kissi bhej do! 😘
+      </p>
+      <button class="btn btn-primary" onclick="closeSuccess()" style="padding: 12px 30px;">
+        Forever Yours ❤️
+      </button>
+    </div>
+  </div>
 
-  <!-- ==========================================================================
-       JAVASCRIPT: LIGHTING ENGINE, AUDIO SYNTHESIS & FESTIVAL INTERACTIONS
-       ========================================================================== -->
+  <!-- Audio Synthesizer (Zero External Dependencies) & Interactive Scripts -->
   <script>
-    /* --------------------------------------------------------------------------
-       1. URL PARAMETERS & PERSONALIZATION
-       -------------------------------------------------------------------------- */
-    const urlParams = new URLSearchParams(window.location.search);
-    let recipientName = urlParams.get('to') || urlParams.get('name') || '';
-    let senderName = urlParams.get('from') || '';
-    let customMsg = urlParams.get('msg') || '';
-    let initialPreset = urlParams.get('vibe') || 'aarti';
-    let cachedShortUrl = '';
-
-    const displayRecipient = document.getElementById('displayRecipient');
-    const displaySenderText = document.getElementById('displaySenderText');
-    const toInput = document.getElementById('toInput');
-    const fromInput = document.getElementById('fromInput');
-    const customMsgInput = document.getElementById('customMsgInput');
-    const customUrlInput = document.getElementById('customUrlInput');
-    const previewClickHereLink = document.getElementById('previewClickHereLink');
-    const previewUrlSub = document.getElementById('previewUrlSub');
-
-    function applyPersonalization() {
-      if (recipientName.trim()) {
-        displayRecipient.textContent = `Wishing ${recipientName} & Family`;
-      } else {
-        displayRecipient.textContent = 'Wishing You & Your Family';
-      }
-
-      if (customMsg.trim() || senderName.trim()) {
-        let msg = customMsg.trim() || 'May Lord Ganesha remove all obstacles from your path and bless your home with boundless prosperity, supreme wisdom, good health, and eternal peace!';
-        if (senderName.trim()) {
-          msg += ` Warmest blessings from ${senderName}.`;
-        }
-        displaySenderText.textContent = msg;
-      }
-
-      toInput.value = recipientName;
-      fromInput.value = senderName;
-      customMsgInput.value = customMsg;
-      updateShareLinks();
-    }
-
-    function buildBaseTargetUrl() {
-      // If opened locally (file:// or localhost), default to GitHub Pages URL
-      let base = window.location.href;
-      if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        base = 'https://pradeepkumar0555.github.io/ganesh-utsav/';
-      }
-
-      const shareUrl = new URL(base);
-      if (recipientName.trim()) shareUrl.searchParams.set('to', recipientName.trim());
-      else shareUrl.searchParams.delete('to');
-
-      if (senderName.trim()) shareUrl.searchParams.set('from', senderName.trim());
-      else shareUrl.searchParams.delete('from');
-
-      if (customMsg.trim()) shareUrl.searchParams.set('msg', customMsg.trim());
-      else shareUrl.searchParams.delete('msg');
-
-      shareUrl.searchParams.set('vibe', currentPresetKey);
-      return shareUrl.toString();
-    }
-
-    function updateShareLinks() {
-      const fullUrl = buildBaseTargetUrl();
-      const customOverride = customUrlInput ? customUrlInput.value.trim() : '';
-      const effectiveUrl = customOverride || cachedShortUrl || fullUrl;
-
-      if (previewClickHereLink) {
-        previewClickHereLink.href = effectiveUrl;
-      }
-      if (previewUrlSub) {
-        previewUrlSub.textContent = effectiveUrl;
-      }
-
-      const toText = recipientName.trim() ? ` ${recipientName}` : '';
-      const fromText = senderName.trim() ? ` from ${senderName}` : '';
-      const waText = `🕉️ *Happy Ganesh Chaturthi!* 🐘✨\n*Ganpati Bappa Morya! Mangal Murti Morya!* 🙏\n\nWishing you${toText} and your family a blessed, prosperous, and joyful Ganesh Utsav${fromText}!\n\n👇 *Click here to open your Divine Aarti & Darshan:*\n👉 ${effectiveUrl}`;
-
-      document.getElementById('whatsappShareBtn').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(waText)}`;
-      return effectiveUrl;
-    }
-
-    /* --------------------------------------------------------------------------
-       2. DYNAMIC VIDEO & STAGE LIGHTING ENGINE (HTML5 CANVAS)
-       -------------------------------------------------------------------------- */
-    const lightCanvas = document.getElementById('lightingCanvas');
-    const lightCtx = lightCanvas.getContext('2d');
-    let width = (lightCanvas.width = window.innerWidth);
-    let height = (lightCanvas.height = window.innerHeight);
+    // --- Floating Hearts Background Canvas ---
+    const canvas = document.getElementById('heartCanvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
 
     window.addEventListener('resize', () => {
-      width = lightCanvas.width = window.innerWidth;
-      height = lightCanvas.height = window.innerHeight;
-      fxCanvas.width = width;
-      fxCanvas.height = height;
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
     });
 
-    // Preset color & motion configurations
-    const PRESETS = {
-      aarti: {
-        name: '🌟 Grand Temple Aarti',
-        ambient: 'radial-gradient(circle at 50% 20%, rgba(255, 107, 26, 0.22) 0%, rgba(180, 80, 20, 0.15) 40%, rgba(9, 3, 16, 0.95) 85%)',
-        haloGlow: 'rgba(255, 170, 0, 0.45)',
-        beams: [
-          { originX: 0.15, angle: 0.4, spread: 0.28, color: [255, 170, 0], speed: 0.7 },
-          { originX: 0.35, angle: 0.15, spread: 0.22, color: [255, 107, 26], speed: 1.1 },
-          { originX: 0.65, angle: -0.15, spread: 0.22, color: [255, 107, 26], speed: 1.0 },
-          { originX: 0.85, angle: -0.4, spread: 0.28, color: [255, 170, 0], speed: 0.8 },
-          { originX: 0.5, angle: 0, spread: 0.35, color: [255, 220, 100], speed: 0.5 }
-        ]
-      },
-      visarjan: {
-        name: '🎆 Dhol-Tasha Stage Lights',
-        ambient: 'radial-gradient(circle at 50% 20%, rgba(230, 0, 120, 0.25) 0%, rgba(255, 170, 0, 0.18) 45%, rgba(9, 3, 16, 0.95) 85%)',
-        haloGlow: 'rgba(255, 0, 128, 0.45)',
-        beams: [
-          { originX: 0.1, angle: 0.6, spread: 0.2, color: [255, 0, 128], speed: 1.8 },
-          { originX: 0.3, angle: 0.25, spread: 0.18, color: [0, 220, 255], speed: 2.2 },
-          { originX: 0.5, angle: 0, spread: 0.3, color: [255, 215, 0], speed: 1.5 },
-          { originX: 0.7, angle: -0.25, spread: 0.18, color: [255, 100, 0], speed: 2.0 },
-          { originX: 0.9, angle: -0.6, spread: 0.2, color: [180, 0, 255], speed: 1.7 }
-        ]
-      },
-      cosmic: {
-        name: '🌌 Cosmic Darshan',
-        ambient: 'radial-gradient(circle at 50% 20%, rgba(100, 50, 255, 0.25) 0%, rgba(20, 100, 220, 0.15) 50%, rgba(6, 2, 14, 0.96) 85%)',
-        haloGlow: 'rgba(130, 80, 255, 0.5)',
-        beams: [
-          { originX: 0.2, angle: 0.3, spread: 0.25, color: [140, 80, 255], speed: 0.4 },
-          { originX: 0.5, angle: 0, spread: 0.4, color: [255, 230, 150], speed: 0.3 },
-          { originX: 0.8, angle: -0.3, spread: 0.25, color: [60, 160, 255], speed: 0.5 },
-          { originX: 0.35, angle: -0.1, spread: 0.2, color: [200, 120, 255], speed: 0.6 },
-          { originX: 0.65, angle: 0.1, spread: 0.2, color: [100, 200, 255], speed: 0.6 }
-        ]
-      },
-      sunrise: {
-        name: '🌅 Sunrise Mangal Murti',
-        ambient: 'radial-gradient(circle at 50% 20%, rgba(255, 140, 50, 0.25) 0%, rgba(255, 90, 40, 0.15) 45%, rgba(9, 3, 16, 0.95) 85%)',
-        haloGlow: 'rgba(255, 140, 0, 0.5)',
-        beams: [
-          { originX: 0.5, angle: 0, spread: 0.55, color: [255, 200, 110], speed: 0.3 },
-          { originX: 0.25, angle: 0.2, spread: 0.3, color: [255, 120, 40], speed: 0.5 },
-          { originX: 0.75, angle: -0.2, spread: 0.3, color: [255, 120, 40], speed: 0.5 },
-          { originX: 0.1, angle: 0.45, spread: 0.25, color: [255, 160, 80], speed: 0.4 },
-          { originX: 0.9, angle: -0.45, spread: 0.25, color: [255, 160, 80], speed: 0.4 }
-        ]
+    const hearts = [];
+    const heartColors = ['#ff4d6d', '#ff758f', '#ff8fa3', '#c9184a', '#ffccd5'];
+
+    class FloatingHeart {
+      constructor() {
+        this.reset();
       }
-    };
-
-    let currentPresetKey = PRESETS[initialPreset] ? initialPreset : 'aarti';
-    let currentPreset = PRESETS[currentPresetKey];
-    let beamsEnabled = true;
-    let beamSpeedMultiplier = 1.0;
-    let beamIntensityMultiplier = 0.85;
-
-    // Floating golden dust embers for atmospheric haze
-    const lightEmbers = [];
-    for (let i = 0; i < 70; i++) {
-      lightEmbers.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        r: Math.random() * 2.5 + 0.8,
-        speedY: -(Math.random() * 0.7 + 0.2),
-        speedX: (Math.random() - 0.5) * 0.4,
-        alpha: Math.random() * 0.6 + 0.2,
-        decay: Math.random() * 0.008 + 0.002
-      });
-    }
-
-    let time = 0;
-    function renderLighting() {
-      lightCtx.clearRect(0, 0, width, height);
-
-      if (beamsEnabled) {
-        time += 0.016 * beamSpeedMultiplier;
-
-        // Draw each volumetric spotlight beam
-        currentPreset.beams.forEach((b, idx) => {
-          const originX = b.originX * width;
-          const originY = 0; // Ceiling spotlight fixture
-
-          // Oscillate angle gracefully
-          const currentAngle = b.angle + Math.sin(time * b.speed + idx * 1.5) * 0.22;
-          const length = height * 1.4;
-          const targetX = originX + Math.sin(currentAngle) * length;
-          const targetY = originY + Math.cos(currentAngle) * length;
-
-          const beamWidthBase = 12;
-          const beamWidthEnd = Math.tan(b.spread) * length * 1.5;
-
-          // Perpendicular vector for light cone geometry
-          const perpX = Math.cos(currentAngle);
-          const perpY = -Math.sin(currentAngle);
-
-          const leftBaseX = originX - perpX * (beamWidthBase / 2);
-          const leftBaseY = originY - perpY * (beamWidthBase / 2);
-          const rightBaseX = originX + perpX * (beamWidthBase / 2);
-          const rightBaseY = originY + perpY * (beamWidthBase / 2);
-
-          const leftEndX = targetX - perpX * (beamWidthEnd / 2);
-          const leftEndY = targetY - perpY * (beamWidthEnd / 2);
-          const rightEndX = targetX + perpX * (beamWidthEnd / 2);
-          const rightEndY = targetY + perpY * (beamWidthEnd / 2);
-
-          // Linear volumetric gradient along the cone
-          const grad = lightCtx.createLinearGradient(originX, originY, targetX, targetY);
-          const [cr, cg, cb] = b.color;
-          const maxAlpha = 0.38 * beamIntensityMultiplier;
-
-          grad.addColorStop(0, `rgba(${cr}, ${cg}, ${cb}, ${maxAlpha * 1.1})`);
-          grad.addColorStop(0.3, `rgba(${cr}, ${cg}, ${cb}, ${maxAlpha * 0.7})`);
-          grad.addColorStop(0.7, `rgba(${cr}, ${cg}, ${cb}, ${maxAlpha * 0.35})`);
-          grad.addColorStop(1, `rgba(${cr}, ${cg}, ${cb}, 0)`);
-
-          lightCtx.save();
-          lightCtx.beginPath();
-          lightCtx.moveTo(leftBaseX, leftBaseY);
-          lightCtx.lineTo(rightBaseX, rightBaseY);
-          lightCtx.lineTo(rightEndX, rightEndY);
-          lightCtx.lineTo(leftEndX, leftEndY);
-          lightCtx.closePath();
-          lightCtx.fillStyle = grad;
-          lightCtx.fill();
-
-          // Stage spotlight fixture bulb glow
-          const bulbGrad = lightCtx.createRadialGradient(originX, originY, 2, originX, originY, 40);
-          bulbGrad.addColorStop(0, `rgba(255, 255, 255, ${0.9 * beamIntensityMultiplier})`);
-          bulbGrad.addColorStop(0.4, `rgba(${cr}, ${cg}, ${cb}, ${0.6 * beamIntensityMultiplier})`);
-          bulbGrad.addColorStop(1, `rgba(${cr}, ${cg}, ${cb}, 0)`);
-
-          lightCtx.beginPath();
-          lightCtx.arc(originX, originY, 40, 0, Math.PI * 2);
-          lightCtx.fillStyle = bulbGrad;
-          lightCtx.fill();
-          lightCtx.restore();
-        });
-      }
-
-      // Draw floating atmospheric light embers
-      lightEmbers.forEach(p => {
-        p.y += p.speedY;
-        p.x += p.speedX;
-        p.alpha += p.decay;
-
-        if (p.alpha > 0.8 || p.alpha < 0.15) {
-          p.decay = -p.decay;
-        }
-
-        if (p.y < 0) {
-          p.y = height + 10;
-          p.x = Math.random() * width;
-        }
-
-        lightCtx.save();
-        lightCtx.beginPath();
-        lightCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        lightCtx.fillStyle = `rgba(255, 220, 120, ${p.alpha * beamIntensityMultiplier})`;
-        lightCtx.shadowBlur = 8;
-        lightCtx.shadowColor = 'rgba(255, 170, 0, 0.8)';
-        lightCtx.fill();
-        lightCtx.restore();
-      });
-
-      requestAnimationFrame(renderLighting);
-    }
-    renderLighting();
-
-    // Switch lighting presets
-    function applyPreset(presetKey) {
-      if (!PRESETS[presetKey]) return;
-      currentPresetKey = presetKey;
-      currentPreset = PRESETS[presetKey];
-
-      document.getElementById('activePresetName').textContent = currentPreset.name;
-      document.getElementById('stageAmbient').style.background = currentPreset.ambient;
-      document.getElementById('divineHalo').style.background = `radial-gradient(circle, ${currentPreset.haloGlow} 0%, rgba(255, 215, 0, 0.08) 65%, transparent 75%)`;
-
-      document.querySelectorAll('.preset-pill').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.preset === presetKey);
-      });
-      updateShareLinks();
-    }
-
-    document.querySelectorAll('.preset-pill').forEach(btn => {
-      btn.addEventListener('click', () => applyPreset(btn.dataset.preset));
-    });
-
-    document.getElementById('beamSpeed').addEventListener('input', (e) => {
-      beamSpeedMultiplier = parseFloat(e.target.value);
-    });
-
-    document.getElementById('beamIntensity').addEventListener('input', (e) => {
-      beamIntensityMultiplier = parseFloat(e.target.value);
-    });
-
-    const fogToggleBtn = document.getElementById('fogToggleBtn');
-    fogToggleBtn.addEventListener('click', () => {
-      beamsEnabled = !beamsEnabled;
-      fogToggleBtn.classList.toggle('active', beamsEnabled);
-      fogToggleBtn.querySelector('span:last-child').textContent = beamsEnabled ? 'Stage Beams: ON' : 'Stage Beams: OFF';
-    });
-
-    /* --------------------------------------------------------------------------
-       3. WEB AUDIO DEVOTIONAL SOUNDSCAPES & TEMPLE BELLS
-       -------------------------------------------------------------------------- */
-    let audioCtx = null;
-    let isAudioPlaying = false;
-    let soundInterval = null;
-
-    function getAudioContext() {
-      if (!audioCtx) {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        audioCtx = new AudioContext();
-      }
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-      return audioCtx;
-    }
-
-    // Synthesize brass temple bell with realistic metallic harmonic overtones
-    function playTempleBell(frequency = 780, volume = 0.4) {
-      try {
-        const ctx = getAudioContext();
-        const now = ctx.currentTime;
-
-        // Rich metallic bell harmonics: Fundamental + Overtones
-        const harmonics = [
-          { f: frequency, g: 0.6, d: 2.8 },
-          { f: frequency * 1.58, g: 0.35, d: 2.2 },
-          { f: frequency * 2.24, g: 0.25, d: 1.8 },
-          { f: frequency * 3.12, g: 0.15, d: 1.2 },
-          { f: frequency * 4.85, g: 0.08, d: 0.8 }
-        ];
-
-        harmonics.forEach(h => {
-          const osc = ctx.createOscillator();
-          const gain = ctx.createGain();
-
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(h.f, now);
-
-          gain.gain.setValueAtTime(volume * h.g, now);
-          gain.gain.exponentialRampToValueAtTime(0.0001, now + h.d);
-
-          osc.connect(gain);
-          gain.connect(ctx.destination);
-
-          osc.start(now);
-          osc.stop(now + h.d);
-        });
-      } catch (err) {
-        console.warn('Audio play error:', err);
-      }
-    }
-
-    // Synthesize sacred conch (Shankh) deep acoustic drone
-    function playShankhDrone() {
-      try {
-        const ctx = getAudioContext();
-        const now = ctx.currentTime;
-        const duration = 3.5;
-
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc.type = 'sawtooth';
-        // Pitch scoop characteristic of a conch blow
-        osc.frequency.setValueAtTime(215, now);
-        osc.frequency.exponentialRampToValueAtTime(260, now + 0.8);
-        osc.frequency.exponentialRampToValueAtTime(245, now + duration);
-
-        const filter = ctx.createBiquadFilter();
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(500, now);
-        filter.frequency.exponentialRampToValueAtTime(850, now + 1.2);
-
-        gain.gain.setValueAtTime(0.001, now);
-        gain.gain.linearRampToValueAtTime(0.25, now + 0.6);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
-
-        osc.connect(filter);
-        filter.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + duration);
-      } catch (e) {
-        console.warn(e);
-      }
-    }
-
-    // Synthesize celebratory Dhol drum beat
-    function playDholBeat() {
-      try {
-        const ctx = getAudioContext();
-        const now = ctx.currentTime;
-
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(160, now);
-        osc.frequency.exponentialRampToValueAtTime(55, now + 0.25);
-
-        gain.gain.setValueAtTime(0.45, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + 0.35);
-      } catch (e) {}
-    }
-
-    // Toggle ambient temple bells loop
-    const audioToggleBtn = document.getElementById('audioToggleBtn');
-    const audioBtnText = document.getElementById('audioBtnText');
-
-    function toggleTempleAudio() {
-      getAudioContext();
-      isAudioPlaying = !isAudioPlaying;
-
-      if (isAudioPlaying) {
-        audioToggleBtn.classList.add('active', 'playing');
-        audioBtnText.textContent = 'Mute Sounds';
-        playShankhDrone();
-        setTimeout(() => playTempleBell(840, 0.5), 600);
-
-        // Cyclic temple bell & dhol harmony
-        let step = 0;
-        soundInterval = setInterval(() => {
-          step++;
-          if (step % 2 === 0) {
-            playTempleBell(780 + (step % 3) * 60, 0.35);
-          }
-          if (step % 4 === 0) {
-            playDholBeat();
-          }
-        }, 1400);
-      } else {
-        audioToggleBtn.classList.remove('active', 'playing');
-        audioBtnText.textContent = '🔊 Temple Chimes';
-        if (soundInterval) clearInterval(soundInterval);
-      }
-    }
-
-    audioToggleBtn.addEventListener('click', toggleTempleAudio);
-
-    /* --------------------------------------------------------------------------
-       4. SACRED CHANT RECITATION (WEB SPEECH SYNTHESIS)
-       -------------------------------------------------------------------------- */
-    const chantSpeechBtn = document.getElementById('chantSpeechBtn');
-    let isSpeaking = false;
-
-    chantSpeechBtn.addEventListener('click', () => {
-      getAudioContext();
-      playTempleBell(880, 0.5);
-
-      if ('speechSynthesis' in window) {
-        if (window.speechSynthesis.speaking) {
-          window.speechSynthesis.cancel();
-          chantSpeechBtn.querySelector('span:last-child').textContent = 'Listen to Sacred Chant';
-          return;
-        }
-
-        const mantraText = "Om Vakratunda Maha-kaya, Surya-koti Sama-prabha. Nirvighnam Kuru Me Deva, Sarva Karyeshu Sarvada. Ganpati Bappa Morya, Mangal Murti Morya!";
-        const utterance = new SpeechSynthesisUtterance(mantraText);
-        utterance.rate = 0.85;
-        utterance.pitch = 0.95;
-
-        // Attempt Hindi / Indian English voice
-        const voices = window.speechSynthesis.getVoices();
-        const indianVoice = voices.find(v => v.lang.includes('hi') || v.lang.includes('IN') || v.name.includes('India'));
-        if (indianVoice) utterance.voice = indianVoice;
-
-        chantSpeechBtn.querySelector('span:last-child').textContent = 'Chanting... 🕉️';
-
-        utterance.onend = () => {
-          chantSpeechBtn.querySelector('span:last-child').textContent = 'Listen to Sacred Chant';
-          playTempleBell(780, 0.4);
-        };
-
-        window.speechSynthesis.speak(utterance);
-      } else {
-        showToast('Speech synthesis not supported on this browser.');
-      }
-    });
-
-    /* --------------------------------------------------------------------------
-       5. INTERACTIVE RITUALS & OFFERINGS PHYSICS (FX CANVAS)
-       -------------------------------------------------------------------------- */
-    const fxCanvas = document.getElementById('fxCanvas');
-    const fxCtx = fxCanvas.getContext('2d');
-    fxCanvas.width = width;
-    fxCanvas.height = height;
-
-    const fxParticles = [];
-
-    class OfferingParticle {
-      constructor(x, y, emoji, scale = 1, vx, vy) {
-        this.x = x;
-        this.y = y;
-        this.emoji = emoji;
-        this.scale = scale;
-        this.vx = vx !== undefined ? vx : (Math.random() - 0.5) * 8;
-        this.vy = vy !== undefined ? vy : -Math.random() * 8 - 4;
-        this.gravity = 0.28;
+      reset() {
+        this.x = Math.random() * width;
+        this.y = height + 20;
+        this.size = Math.random() * 14 + 10;
+        this.speedY = Math.random() * 1.5 + 0.6;
+        this.speedX = (Math.random() - 0.5) * 0.8;
+        this.color = heartColors[Math.floor(Math.random() * heartColors.length)];
+        this.opacity = Math.random() * 0.6 + 0.3;
         this.rotation = Math.random() * Math.PI * 2;
-        this.rotSpeed = (Math.random() - 0.5) * 0.15;
-        this.alpha = 1;
-        this.decay = Math.random() * 0.01 + 0.008;
+        this.rotSpeed = (Math.random() - 0.5) * 0.03;
       }
-
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.vy += this.gravity;
+        this.y -= this.speedY;
+        this.x += this.speedX;
         this.rotation += this.rotSpeed;
-        this.alpha -= this.decay;
+        if (this.y < -30 || this.x < -20 || this.x > width + 20) {
+          this.reset();
+        }
       }
-
-      draw(ctx) {
+      draw() {
         ctx.save();
         ctx.translate(this.x, this.y);
         ctx.rotate(this.rotation);
-        ctx.globalAlpha = Math.max(0, this.alpha);
-        ctx.font = `${Math.round(28 * this.scale)}px sans-serif`;
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(this.emoji, 0, 0);
+        ctx.globalAlpha = this.opacity;
+        ctx.fillStyle = this.color;
+
+        ctx.beginPath();
+        const topCurveHeight = this.size * 0.3;
+        ctx.moveTo(0, topCurveHeight);
+        ctx.bezierCurveTo(0, 0, -this.size / 2, 0, -this.size / 2, topCurveHeight);
+        ctx.bezierCurveTo(-this.size / 2, (this.size + topCurveHeight) / 2, 0, (this.size + topCurveHeight) / 2, 0, this.size);
+        ctx.bezierCurveTo(0, (this.size + topCurveHeight) / 2, this.size / 2, (this.size + topCurveHeight) / 2, this.size / 2, topCurveHeight);
+        ctx.bezierCurveTo(this.size / 2, 0, 0, 0, 0, topCurveHeight);
+        ctx.closePath();
+        ctx.fill();
+
         ctx.restore();
       }
     }
 
-    function renderFX() {
-      fxCtx.clearRect(0, 0, width, height);
-
-      for (let i = fxParticles.length - 1; i >= 0; i--) {
-        const p = fxParticles[i];
-        p.update();
-        p.draw(fxCtx);
-
-        if (p.alpha <= 0 || p.y > height + 50) {
-          fxParticles.splice(i, 1);
-        }
-      }
-
-      requestAnimationFrame(renderFX);
-    }
-    renderFX();
-
-    // Spawn shower from top
-    function spawnShower(emojiArr, count = 35) {
-      for (let i = 0; i < count; i++) {
-        const x = Math.random() * width;
-        const y = -20 - Math.random() * 80;
-        const emoji = emojiArr[Math.floor(Math.random() * emojiArr.length)];
-        const p = new OfferingParticle(x, y, emoji, Math.random() * 0.5 + 0.8, (Math.random() - 0.5) * 4, Math.random() * 3 + 2);
-        p.gravity = 0.15;
-        fxParticles.push(p);
-      }
+    for (let i = 0; i < 35; i++) {
+      hearts.push(new FloatingHeart());
     }
 
-    // Explode burst from element position
-    function spawnBurstAtElement(elem, emojiArr, count = 25) {
-      const rect = elem.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-
-      for (let i = 0; i < count; i++) {
-        const emoji = emojiArr[Math.floor(Math.random() * emojiArr.length)];
-        fxParticles.push(new OfferingParticle(cx, cy, emoji, Math.random() * 0.6 + 0.8));
-      }
+    function animateHearts() {
+      ctx.clearRect(0, 0, width, height);
+      hearts.forEach(h => {
+        h.update();
+        h.draw();
+      });
+      requestAnimationFrame(animateHearts);
     }
+    animateHearts();
 
-    // 1. Perform Aarti
-    const aartiBtn = document.getElementById('btnAarti');
-    const aartiThali = document.getElementById('aartiThali');
-    let aartiActive = false;
+    // --- Soft Ambient Romantic Music Synthesizer (Web Audio API) ---
+    let audioCtx = null;
+    let isPlaying = false;
+    let melodyTimer = null;
+    const musicBtn = document.getElementById('musicToggle');
 
-    function triggerAarti() {
-      aartiActive = !aartiActive;
-      aartiThali.classList.toggle('active-aarti', aartiActive);
-      aartiBtn.classList.toggle('active', aartiActive);
+    const romanceNotes = [
+      261.63, // C4
+      293.66, // D4
+      329.63, // E4
+      392.00, // G4
+      440.00, // A4
+      523.25, // C5
+      587.33, // D5
+      659.25  // E5
+    ];
 
-      if (aartiActive) {
-        aartiBtn.querySelector('.ritual-label').textContent = 'Stop Aarti';
-        playTempleBell(880, 0.6);
-        setTimeout(() => playTempleBell(980, 0.5), 700);
-        showToast('🪔 Aarti in motion! Singing praises of Ganpati Bappa...');
-        spawnBurstAtElement(aartiThali, ['✨', '🌟', '🪔', '🌺'], 30);
-      } else {
-        aartiBtn.querySelector('.ritual-label').textContent = 'Perform Aarti';
-        showToast('Aarti completed with auspicious blessings!');
-      }
-    }
-
-    aartiBtn.addEventListener('click', triggerAarti);
-    aartiThali.addEventListener('click', triggerAarti);
-
-    // 2. Offer Modak
-    document.getElementById('btnModak').addEventListener('click', (e) => {
-      playTempleBell(940, 0.4);
-      spawnShower(['🥟', '🟡', '✨', '🍯'], 30);
-      showToast('🥟 Modak offered to Bappa with pure devotion!');
-    });
-
-    // 3. Shower Flowers
-    document.getElementById('btnFlowers').addEventListener('click', (e) => {
-      playTempleBell(820, 0.4);
-      spawnShower(['🌺', '🌼', '🌸', '🌹', '🌿'], 45);
-      showToast('🌺 Divine Hibiscus & Marigold showered on Bappa!');
-    });
-
-    // 4. Break Coconut
-    document.getElementById('btnCoconut').addEventListener('click', (e) => {
-      playDholBeat();
-      playTempleBell(1020, 0.6);
-      spawnBurstAtElement(e.currentTarget, ['🥥', '💧', '✨', '🪙', '🌟'], 35);
-      showToast('🥥 Sacred Coconut broken! Auspicious luck & victory!');
-    });
-
-    // 5. Festive Fireworks
-    document.getElementById('btnFireworks').addEventListener('click', (e) => {
-      playDholBeat();
-      setTimeout(playDholBeat, 150);
-      spawnShower(['🎆', '✨', '🎇', '💫', '🎉', '🌟'], 50);
-      showToast('🎆 Ganpati Bappa Morya! Pudhchya Varshi Lavkar Ya!');
-    });
-
-    // Ring hanging bells
-    function ringBell(bellWrapper, freq) {
-      bellWrapper.classList.add('ringing');
-      playTempleBell(freq, 0.6);
-      spawnBurstAtElement(bellWrapper, ['🔔', '✨', '🎶'], 12);
-      setTimeout(() => bellWrapper.classList.remove('ringing'), 1200);
-    }
-
-    document.getElementById('bellLeft').addEventListener('click', (e) => ringBell(e.currentTarget, 820));
-    document.getElementById('bellRight').addEventListener('click', (e) => ringBell(e.currentTarget, 920));
-
-    /* --------------------------------------------------------------------------
-       6. MODAL & LINK CUSTOMIZER
-       -------------------------------------------------------------------------- */
-    const customModal = document.getElementById('customModal');
-    const openCustomizeModalBtn = document.getElementById('openCustomizeModalBtn');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const applyCustomBtn = document.getElementById('applyCustomBtn');
-    const copyCustomLinkBtn = document.getElementById('copyCustomLinkBtn');
-
-    openCustomizeModalBtn.addEventListener('click', () => {
-      customModal.classList.add('open');
-    });
-
-    closeModalBtn.addEventListener('click', () => {
-      customModal.classList.remove('open');
-    });
-
-    customModal.addEventListener('click', (e) => {
-      if (e.target === customModal) customModal.classList.remove('open');
-    });
-
-    applyCustomBtn.addEventListener('click', () => {
-      recipientName = toInput.value.trim();
-      senderName = fromInput.value.trim();
-      customMsg = customMsgInput.value.trim();
-      applyPersonalization();
-      customModal.classList.remove('open');
-      showToast('✨ Personalization applied successfully!');
-      spawnShower(['🎉', '✨', '🌺'], 25);
-    });
-
-    // Live update preview when inputs change
-    [toInput, fromInput, customMsgInput, customUrlInput].forEach(inp => {
-      if (inp) inp.addEventListener('input', () => updateShareLinks());
-    });
-
-    // 1. Copy as clean "Click Here" Hyperlink
-    const copyClickHereBtn = document.getElementById('copyClickHereBtn');
-    copyClickHereBtn.addEventListener('click', async () => {
-      recipientName = toInput.value.trim();
-      senderName = fromInput.value.trim();
-      customMsg = customMsgInput.value.trim();
-      applyPersonalization();
-      const link = updateShareLinks();
-
-      const htmlSnippet = `<a href="${link}" style="color:#d4af37; font-weight:bold; text-decoration:underline;">👉 Click Here for Bappa's Divine Darshan & Aarti ✨</a>`;
-      const plainText = `👉 Click Here for Bappa's Divine Darshan & Aarti ✨:\n${link}`;
-
+    function playSoftPluck(freq, duration = 1.6) {
+      if (!audioCtx) return;
       try {
-        if (navigator.clipboard && window.ClipboardItem) {
-          const blobHtml = new Blob([htmlSnippet], { type: 'text/html' });
-          const blobText = new Blob([plainText], { type: 'text/plain' });
-          await navigator.clipboard.write([
-            new ClipboardItem({
-              'text/html': blobHtml,
-              'text/plain': blobText
-            })
-          ]);
-          showToast('👉 "Click Here" formatted link copied! Paste anywhere.');
-          customModal.classList.remove('open');
-          return;
-        }
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+        gain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.08, audioCtx.currentTime + 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
       } catch (e) {
-        console.warn('ClipboardItem error, falling back to writeText:', e);
+        console.error(e);
       }
-
-      if (navigator.clipboard) {
-        await navigator.clipboard.writeText(plainText);
-        showToast('👉 "Click Here" link copied to clipboard!');
-        customModal.classList.remove('open');
-      }
-    });
-
-    // 2. Auto-Shorten URL via TinyURL API
-    const shortenUrlBtn = document.getElementById('shortenUrlBtn');
-    shortenUrlBtn.addEventListener('click', async () => {
-      recipientName = toInput.value.trim();
-      senderName = fromInput.value.trim();
-      customMsg = customMsgInput.value.trim();
-      applyPersonalization();
-      const longUrl = buildBaseTargetUrl();
-
-      shortenUrlBtn.querySelector('span:last-child').textContent = 'Shortening...';
-
-      try {
-        const res = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(longUrl)}`);
-        if (res.ok) {
-          const shortUrl = (await res.text()).trim();
-          if (shortUrl.startsWith('http')) {
-            cachedShortUrl = shortUrl;
-            if (customUrlInput) customUrlInput.value = shortUrl;
-            updateShareLinks();
-            if (navigator.clipboard) {
-              await navigator.clipboard.writeText(shortUrl);
-            }
-            showToast('⚡ Short link generated & copied: ' + shortUrl);
-            shortenUrlBtn.querySelector('span:last-child').textContent = 'Shorten URL';
-            return;
-          }
-        }
-      } catch (err) {
-        console.warn('TinyURL fetch error:', err);
-      }
-
-      // Fallback if network blocked: provide clean masked vanity format
-      const vanityUrl = `https://tinyurl.com/ganesh-chaturthi-blessing`;
-      cachedShortUrl = vanityUrl;
-      if (customUrlInput) customUrlInput.value = vanityUrl;
-      updateShareLinks();
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(vanityUrl);
-      }
-      showToast('⚡ Short link set & copied: ' + vanityUrl);
-      shortenUrlBtn.querySelector('span:last-child').textContent = 'Shorten URL';
-    });
-
-    // 3. Copy Direct URL
-    copyCustomLinkBtn.addEventListener('click', () => {
-      recipientName = toInput.value.trim();
-      senderName = fromInput.value.trim();
-      customMsg = customMsgInput.value.trim();
-      applyPersonalization();
-      const link = updateShareLinks();
-
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(link).then(() => {
-          showToast('📋 Link copied to clipboard!');
-          customModal.classList.remove('open');
-        });
-      } else {
-        showToast('Link created! Check address bar or share on WhatsApp.');
-        customModal.classList.remove('open');
-      }
-    });
-
-    function showToast(text) {
-      const toast = document.getElementById('toastMsg');
-      toast.textContent = text;
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 3200);
     }
 
-    // Initial setup
-    applyPersonalization();
-    applyPreset(currentPresetKey);
+    function startMelodyLoop() {
+      const melodySequence = [
+        romanceNotes[0], romanceNotes[2], romanceNotes[3], romanceNotes[4],
+        romanceNotes[5], romanceNotes[4], romanceNotes[3], romanceNotes[2],
+        romanceNotes[1], romanceNotes[3], romanceNotes[4], romanceNotes[6]
+      ];
+      let step = 0;
 
-    // Clean / mask the browser address bar on load so visitors see the clean 'Click Here' label
-    try {
-      if (window.history && window.history.replaceState && window.location.protocol !== 'file:') {
-        window.history.replaceState(null, document.title, window.location.pathname + '#Click-Here-To-Open-Divine-Aarti-&-Darshan');
+      melodyTimer = setInterval(() => {
+        if (!isPlaying) return;
+        const note = melodySequence[step % melodySequence.length];
+        playSoftPluck(note, 2.0);
+        if (step % 4 === 0) {
+          playSoftPluck(romanceNotes[0] / 2, 2.5); // Warm bass note
+        }
+        step++;
+      }, 480);
+    }
+
+    musicBtn.addEventListener('click', () => {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
       }
-    } catch (e) {}
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        musicBtn.classList.add('playing');
+        musicBtn.innerHTML = '💖';
+        startMelodyLoop();
+      } else {
+        musicBtn.classList.remove('playing');
+        musicBtn.innerHTML = '🎵';
+        clearInterval(melodyTimer);
+      }
+    });
+
+    // --- 1000 Sorries Generator & Counter ---
+    let currentCount = 0;
+    const targetCount = 1000;
+    const counterDisplay = document.getElementById('sorryCounter');
+    const progressFill = document.getElementById('progressFill');
+    const bubbleStream = document.getElementById('bubbleStream');
+    const btnRapidSorry = document.getElementById('btnRapidSorry');
+    const btnManualSorry = document.getElementById('btnManualSorry');
+    const btnOpenBook = document.getElementById('btnOpenBook');
+
+    const sweetPhrases = [
+      "Sorry meri jaan Anjali! 🥺",
+      "Kal bina wajah gussa karne ke liye I am so sorry! 💔",
+      "Mera pyara sa bacha, please maan jao na! 🫂",
+      "Galti ho gayi duffer se, ab maaf kar do! 🙈",
+      "Anjali ke bina meri smile adhoori hai! 🌹",
+      "I promise to always keep you happy! 🤞",
+      "You are the most precious person in my world! 💖",
+      "Pouting band karo aur please hass do! 😊",
+      "Sorry for being a total idiot yesterday! 🙇‍♂️",
+      "Love you infinitely, meri Anjali! ❤️"
+    ];
+
+    function updateCounterDisplay(newVal) {
+      currentCount = Math.min(newVal, targetCount);
+      counterDisplay.textContent = currentCount;
+      const pct = (currentCount / targetCount) * 100;
+      progressFill.style.width = pct + '%';
+
+      if (currentCount > 0) {
+        const randomPhrase = sweetPhrases[Math.floor(Math.random() * sweetPhrases.length)];
+        bubbleStream.innerHTML = `<strong>#${currentCount}:</strong> ${randomPhrase}`;
+      }
+
+      if (currentCount >= targetCount) {
+        bubbleStream.innerHTML = `🎉 <strong>1000/1000 Complete!</strong> Pure 1000 sorries delivered to Anjali's heart! Ab to maaf kar do bacha! ❤️`;
+        triggerConfetti(50);
+      }
+    }
+
+    // Rapid 1000 Counter Animation
+    btnRapidSorry.addEventListener('click', () => {
+      if (currentCount >= targetCount) {
+        updateCounterDisplay(targetCount);
+        return;
+      }
+      btnRapidSorry.disabled = true;
+      btnRapidSorry.textContent = "Sending Love & Sorries... 💌";
+
+      const start = currentCount;
+      const diff = targetCount - start;
+      const duration = 1800; // ms
+      const startTime = performance.now();
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // ease-out cubic
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const val = Math.round(start + diff * ease);
+        updateCounterDisplay(val);
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          updateCounterDisplay(targetCount);
+          btnRapidSorry.disabled = false;
+          btnRapidSorry.textContent = "✨ Sent All 1000 Sorries!";
+        }
+      }
+      requestAnimationFrame(step);
+    });
+
+    btnManualSorry.addEventListener('click', () => {
+      if (currentCount < targetCount) {
+        updateCounterDisplay(currentCount + 1);
+        triggerMiniHeart(btnManualSorry);
+      }
+    });
+
+    // Populate and View 1000 Sorries Modal
+    let isModalPopulated = false;
+    const modal = document.getElementById('sorryModal');
+    const modalList = document.getElementById('modalSorryList');
+    const modalClose = document.getElementById('modalClose');
+
+    btnOpenBook.addEventListener('click', () => {
+      if (!isModalPopulated) {
+        populate1000Sorries();
+        isModalPopulated = true;
+      }
+      modal.style.display = 'flex';
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+
+    function populate1000Sorries() {
+      const fragment = document.createDocumentFragment();
+      for (let i = 1; i <= 1000; i++) {
+        const div = document.createElement('div');
+        div.className = 'sorry-item';
+
+        let msg = "Sorry meri jaan Anjali! ❤️";
+        if (i === 1) msg = "Kal bina kisi baat ke gussa karne ke liye dil se sorry 😔";
+        else if (i === 2) msg = "Apne sabse pyare bache ka dil dukhane ke liye sorry 🥺";
+        else if (i === 3) msg = "Itna bada duffer hone ke liye sorry 🙈";
+        else if (i === 10) msg = "Tumhari masoom si smile chhinne ke liye sorry 💔";
+        else if (i === 50) msg = "Tumhara gussa 100% sahi hai, par I love you so much ❤️";
+        else if (i === 100) msg = "Aage se bina soche kabhi gussa nahi karunga, promise 🤞";
+        else if (i === 500) msg = "Adha rasta paar ho gaya, ab to thoda sa muskura do na bacha! 😊";
+        else if (i === 1000) msg = "Pure 1000 ho gaye! You are my world, Anjali. Forever and always! 💖👑";
+        else {
+          const ph = sweetPhrases[(i + (i % 7)) % sweetPhrases.length];
+          msg = `${ph} (Sorry #${i})`;
+        }
+
+        div.innerHTML = `<span class="num">#${i}</span> <span>${msg}</span>`;
+        fragment.appendChild(div);
+      }
+      modalList.appendChild(fragment);
+    }
+
+    // --- Interactive "Runaway No" Button ---
+    const btnNo = document.getElementById('btnNo');
+    const btnYes = document.getElementById('btnYes');
+    const successOverlay = document.getElementById('successOverlay');
+
+    const noTexts = [
+      "Nahi, Abhi Bhi Gussa Hu! 😤",
+      "Pakka nahi manogi? 🥺",
+      "Dekho me ro dunga abhi! 😭",
+      "Ice cream khilaunga pakka! 🍨",
+      "Bache pe thoda taras khao! 🙈",
+      "Itna gussa health ke liye bura h! ❤️",
+      "Achha sorry na meri jaan! 🫂",
+      "Dekho button bhi bhaag raha hai! 😂",
+      "Bas ek aakhri baar maaf kar do! 🙏"
+    ];
+    let noClickCount = 0;
+
+    function moveNoButton() {
+      noClickCount++;
+      btnNo.textContent = noTexts[noClickCount % noTexts.length];
+
+      // Grow Yes button progressively
+      const currentScale = 1 + (noClickCount * 0.1);
+      btnYes.style.transform = `scale(${Math.min(currentScale, 1.6)})`;
+
+      const parent = btnNo.parentElement;
+      const rect = parent.getBoundingClientRect();
+      const maxX = rect.width - btnNo.offsetWidth - 20;
+      const maxY = rect.height - btnNo.offsetHeight - 10;
+
+      const randX = Math.max(10, Math.floor(Math.random() * (maxX > 20 ? maxX : 80)));
+      const randY = Math.max(-40, Math.floor((Math.random() - 0.5) * 120));
+
+      btnNo.style.position = 'relative';
+      btnNo.style.left = `${randX - 40}px`;
+      btnNo.style.top = `${randY}px`;
+    }
+
+    btnNo.addEventListener('mouseenter', moveNoButton);
+    btnNo.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      moveNoButton();
+    });
+    btnNo.addEventListener('click', moveNoButton);
+
+    // Yes Button Click Celebration
+    btnYes.addEventListener('click', () => {
+      successOverlay.style.display = 'flex';
+      triggerConfetti(120);
+      playSoftPluck(523.25, 2.0);
+      setTimeout(() => playSoftPluck(659.25, 2.0), 200);
+      setTimeout(() => playSoftPluck(783.99, 2.5), 400);
+    });
+
+    function closeSuccess() {
+      successOverlay.style.display = 'none';
+    }
+
+    // Love Coupons Redeem logic
+    function redeemCoupon(card, title) {
+      if (!card.classList.contains('redeemed')) {
+        card.classList.add('redeemed');
+        card.querySelector('.coupon-status').textContent = '✅ Redeemed with Love!';
+        card.querySelector('.coupon-status').style.color = '#15803d';
+        triggerMiniHeart(card);
+        alert(`Yay! "${title}" coupon redeemed! Yeh promise ab locked ho gaya hai Anjali! ❤️`);
+      }
+    }
+
+    // Mini Heart Burst Effect
+    function triggerMiniHeart(elem) {
+      const rect = elem.getBoundingClientRect();
+      for (let i = 0; i < 6; i++) {
+        const heart = document.createElement('div');
+        heart.innerHTML = '❤️';
+        heart.style.position = 'fixed';
+        heart.style.left = (rect.left + rect.width / 2) + 'px';
+        heart.style.top = (rect.top + rect.height / 2) + 'px';
+        heart.style.fontSize = (Math.random() * 12 + 16) + 'px';
+        heart.style.pointerEvents = 'none';
+        heart.style.zIndex = '9999';
+        heart.style.transition = 'all 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+        document.body.appendChild(heart);
+
+        const destX = (Math.random() - 0.5) * 120;
+        const destY = -Math.random() * 100 - 30;
+
+        setTimeout(() => {
+          heart.style.transform = `translate(${destX}px, ${destY}px) scale(0)`;
+          heart.style.opacity = '0';
+        }, 20);
+
+        setTimeout(() => heart.remove(), 850);
+      }
+    }
+
+    // Confetti Fireworks Engine
+    function triggerConfetti(count = 80) {
+      const colors = ['#ff4d6d', '#ff758f', '#ffccd5', '#f59e0b', '#10b981', '#3b82f6'];
+      for (let i = 0; i < count; i++) {
+        const conf = document.createElement('div');
+        conf.style.position = 'fixed';
+        conf.style.left = '50%';
+        conf.style.top = '50%';
+        conf.style.width = (Math.random() * 8 + 6) + 'px';
+        conf.style.height = (Math.random() * 8 + 6) + 'px';
+        conf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        conf.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+        conf.style.pointerEvents = 'none';
+        conf.style.zIndex = '99999';
+        conf.style.transition = 'all 1.4s cubic-bezier(0.1, 0.8, 0.3, 1)';
+        document.body.appendChild(conf);
+
+        const angle = Math.random() * Math.PI * 2;
+        const velocity = Math.random() * 320 + 80;
+        const destX = Math.cos(angle) * velocity;
+        const destY = Math.sin(angle) * velocity;
+
+        setTimeout(() => {
+          conf.style.transform = `translate(${destX}px, ${destY}px) rotate(${Math.random() * 720}deg)`;
+          conf.style.opacity = '0';
+        }, 20);
+
+        setTimeout(() => conf.remove(), 1500);
+      }
+    }
   </script>
 </body>
-
 </html>
