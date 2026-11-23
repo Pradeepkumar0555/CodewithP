@@ -748,17 +748,17 @@
               <span class="detail-icon">📍</span>
               <div class="detail-content">
                 <strong>Venue</strong>
-                <span id="muhurthamVenue">Hotel Name Here, Address Here, Address Here</span>
+                <span id="muhurthamVenue">Captain Lal Chand Gadhwal Farm House</span>
               </div>
             </li>
           </ul>
         </div>
 
         <div class="event-actions">
-          <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-event btn-maps">
+          <a href="https://www.google.com/maps/search/?api=1&query=Captain+Lal+Chand+Gadhwal+Farm+House" target="_blank" rel="noopener" class="btn-event btn-maps">
             <span>🗺️</span> View Map
           </a>
-          <button class="btn-event btn-calendar" onclick="addToCalendar('Shubh Muhurtham Wedding', 'Hotel Name Here', '2026-05-11T09:30:00')">
+          <button class="btn-event btn-calendar" onclick="addToCalendar('Shubh Muhurtham Wedding', 'Captain Lal Chand Gadhwal Farm House', '2026-05-11T09:30:00')">
             <span>📅</span> Add to Cal
           </button>
         </div>
@@ -797,17 +797,17 @@
               <span class="detail-icon">📍</span>
               <div class="detail-content">
                 <strong>Venue</strong>
-                <span id="receptionVenue">Hotel Name Here, Address Here, Address Here</span>
+                <span id="receptionVenue">Captain Lal Chand Gadhwal Farm House</span>
               </div>
             </li>
           </ul>
         </div>
 
         <div class="event-actions">
-          <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-event btn-maps">
+          <a href="https://www.google.com/maps/search/?api=1&query=Captain+Lal+Chand+Gadhwal+Farm+House" target="_blank" rel="noopener" class="btn-event btn-maps">
             <span>🗺️</span> View Map
           </a>
-          <button class="btn-event btn-calendar" onclick="addToCalendar('Royal Wedding Reception', 'Hotel Name Here', '2026-05-12T19:30:00')">
+          <button class="btn-event btn-calendar" onclick="addToCalendar('Royal Wedding Reception', 'Captain Lal Chand Gadhwal Farm House', '2026-05-12T19:30:00')">
             <span>📅</span> Add to Cal
           </button>
         </div>
@@ -845,6 +845,11 @@
       if (hosts) document.getElementById('hostBanner').innerHTML = `Cordially Hosted by:<br><strong>The ${hosts}</strong>`;
       if (gParents) document.getElementById('groomParents').textContent = gParents;
       if (bParents) document.getElementById('brideParents').textContent = bParents;
+      const venue = urlParams.get('venue');
+      if (venue) {
+        document.getElementById('muhurthamVenue').textContent = venue;
+        document.getElementById('receptionVenue').textContent = venue;
+      }
     })();
 
     // --- 2. Falling Rose & Marigold Petals (HTML5 Canvas) ---

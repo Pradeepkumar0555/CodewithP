@@ -20,11 +20,11 @@ An ultra-luxurious, heritage-inspired digital wedding invitation website crafted
 4. **📜 Ceremony Itinerary & Cards**:
    - **Shubh Muhurtham / Vivah Sanskar**:
      - *Date*: Wednesday, 11th May 20XX | 9:30 AM onwards
-     - *Venue*: Hotel Name Here, Address Here
+     - *Venue*: Captain Lal Chand Gadhwal Farm House
      - *Actions*: 1-click Google Maps location & Add to Google Calendar.
    - **Royal Reception**:
      - *Date*: Thursday, 12th May 20XX | 7:30 PM onwards
-     - *Venue*: Hotel Name Here, Address Here
+     - *Venue*: Captain Lal Chand Gadhwal Farm House
      - *Actions*: 1-click Google Maps location & Add to Google Calendar.
 
 5. **🌸 Falling Rose & Marigold Petals (Canvas Engine)**:
