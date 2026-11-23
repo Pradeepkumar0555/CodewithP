@@ -548,183 +548,6 @@
       background: var(--bg-cream-dark);
     }
 
-    /* ==========================================================================
-       BLESSINGS & INTERACTIVE GUESTBOOK CARD
-       ========================================================================== */
-    .blessing-card {
-      background: var(--bg-card);
-      border: 2px solid var(--border-gold);
-      border-radius: 28px;
-      padding: 34px 24px;
-      text-align: center;
-      box-shadow: var(--shadow-royal);
-      margin-bottom: 34px;
-      position: relative;
-    }
-
-    .blessing-card h3 {
-      font-family: 'Rozha One', serif;
-      font-size: 1.65rem;
-      color: var(--royal-maroon);
-      margin-bottom: 8px;
-    }
-
-    .blessing-card p {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      margin-bottom: 22px;
-      max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .blessing-form {
-      max-width: 480px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .input-royal {
-      width: 100%;
-      padding: 13px 18px;
-      border-radius: 12px;
-      border: 1px solid var(--border-gold-strong);
-      background: #fff;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.95rem;
-      color: var(--text-dark);
-      outline: none;
-      transition: border 0.3s ease;
-    }
-    .input-royal:focus {
-      border-color: var(--royal-maroon);
-      box-shadow: 0 0 0 3px rgba(117, 20, 34, 0.1);
-    }
-
-    textarea.input-royal {
-      min-height: 85px;
-      resize: vertical;
-    }
-
-    .btn-bless {
-      background: linear-gradient(135deg, #751422, #942030);
-      color: var(--gold-bright);
-      padding: 14px 28px;
-      border-radius: 50px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      border: 1px solid var(--antique-gold);
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(117, 20, 34, 0.25);
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-    .btn-bless:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(117, 20, 34, 0.35);
-    }
-
-    /* Floating Flower Shower Trigger Button */
-    .flower-shower-btn {
-      margin-top: 18px;
-      background: transparent;
-      border: 1.5px dashed var(--antique-gold);
-      color: var(--royal-maroon);
-      padding: 9px 20px;
-      border-radius: 30px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-    }
-    .flower-shower-btn:hover {
-      background: rgba(197, 147, 54, 0.1);
-    }
-
-    /* Live Wishes Wall */
-    .wishes-wall {
-      margin-top: 24px;
-      max-height: 220px;
-      overflow-y: auto;
-      text-align: left;
-      padding: 10px 4px;
-    }
-    .wish-bubble {
-      background: white;
-      border-left: 3px solid var(--antique-gold);
-      padding: 12px 16px;
-      border-radius: 12px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-    }
-    .wish-sender {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 700;
-      font-size: 0.88rem;
-      color: var(--royal-maroon);
-    }
-    .wish-text {
-      font-size: 1rem;
-      color: var(--text-dark);
-      margin-top: 2px;
-    }
-
-    /* ==========================================================================
-       WHATSAPP SHARE & RSVP FOOTER
-       ========================================================================== */
-    .rsvp-card {
-      background: linear-gradient(135deg, #fffcf5 0%, #f7ecd4 100%);
-      border: 2px solid var(--border-gold);
-      border-radius: 24px;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: var(--shadow-soft);
-      margin-bottom: 34px;
-    }
-
-    .rsvp-title {
-      font-family: 'Rozha One', serif;
-      font-size: 1.5rem;
-      color: var(--royal-maroon);
-      margin-bottom: 6px;
-    }
-
-    .rsvp-desc {
-      font-size: 1.05rem;
-      color: var(--text-dark);
-      margin-bottom: 18px;
-    }
-
-    .btn-share-wa {
-      background: #25D366;
-      color: white;
-      padding: 12px 26px;
-      border-radius: 50px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-      transition: all 0.25s ease;
-    }
-    .btn-share-wa:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-    }
-
     /* Designer & Courtesy Border */
     .designer-footer {
       text-align: center;
@@ -993,48 +816,6 @@
     </div>
 
     <!-- ====================================================================
-         SHUBH AASHIRWAD / GUEST BLESSINGS (INTERACTIVE)
-         ==================================================================== -->
-    <div class="blessing-card">
-      <h3>Shubh Aashirwad (Send Blessings)</h3>
-      <p>Your warm wishes and blessings are the most precious gift for the newlyweds.</p>
-
-      <form class="blessing-form" id="blessingForm" onsubmit="handleSendBlessing(event)">
-        <input type="text" class="input-royal" id="guestNameInput" placeholder="Your Good Name" required>
-        <textarea class="input-royal" id="guestWishInput" placeholder="Write your heartfelt blessing & wishes..." required></textarea>
-        <button type="submit" class="btn-bless">
-          <span>🌸</span> Send Your Blessings
-        </button>
-      </form>
-
-      <button type="button" class="flower-shower-btn" onclick="triggerFlowerRain(70)">
-        <span>✨</span> Shower Royal Rose Petals
-      </button>
-
-      <div class="wishes-wall" id="wishesWall">
-        <div class="wish-bubble">
-          <div class="wish-sender">Mr. &amp; Mrs. Sharma</div>
-          <div class="wish-text">Wishing the royal couple a lifetime of joy, harmony, and eternal prosperity! May God bless your new journey! 🌹</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ====================================================================
-         SHARE ON WHATSAPP & RSVP DETAILS
-         ==================================================================== -->
-    <div class="rsvp-card">
-      <h3 class="rsvp-title">Share Invitation</h3>
-      <p class="rsvp-desc">Forward this auspicious royal invitation to family, elders, and dear friends on WhatsApp.</p>
-      <a id="btnShareWhatsApp" href="#" target="_blank" class="btn-share-wa">
-        <!-- WhatsApp Icon SVG -->
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.56 20.15 9.11 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15Z"/>
-        </svg>
-        Share on WhatsApp
-      </a>
-    </div>
-
-    <!-- ====================================================================
          BORDER & DESIGNER FOOTER CREDITS
          ==================================================================== -->
     <div class="designer-footer">
@@ -1064,11 +845,6 @@
       if (hosts) document.getElementById('hostBanner').innerHTML = `Cordially Hosted by:<br><strong>The ${hosts}</strong>`;
       if (gParents) document.getElementById('groomParents').textContent = gParents;
       if (bParents) document.getElementById('brideParents').textContent = bParents;
-
-      // Update WhatsApp Share Link
-      const shareTitle = encodeURIComponent(`👑 Royal Rajasthani Wedding Invitation 👑\n\nYou are cordially invited to celebrate the Shubh Vivah ceremony.\n\nDate: 11th & 12th May\nClick here to view the invitation: `);
-      const pageUrl = encodeURIComponent(window.location.href);
-      document.getElementById('btnShareWhatsApp').href = `https://api.whatsapp.com/send?text=${shareTitle}${pageUrl}`;
     })();
 
     // --- 2. Falling Rose & Marigold Petals (HTML5 Canvas) ---
@@ -1282,37 +1058,7 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // --- 5. Interactive Blessing Submission ---
-    function handleSendBlessing(e) {
-      e.preventDefault();
-      const name = document.getElementById('guestNameInput').value.trim();
-      const wish = document.getElementById('guestWishInput').value.trim();
-      if (!name || !wish) return;
-
-      const wishesWall = document.getElementById('wishesWall');
-      const bubble = document.createElement('div');
-      bubble.className = 'wish-bubble';
-      bubble.innerHTML = `
-        <div class="wish-sender">${escapeHTML(name)}</div>
-        <div class="wish-text">${escapeHTML(wish)} 🌹</div>
-      `;
-      wishesWall.prepend(bubble);
-
-      // Trigger Celebration Flower Rain
-      triggerFlowerRain(80);
-
-      // Reset form
-      document.getElementById('blessingForm').reset();
-      alert(`Dhanyawad ${name}! Aapka aashirwad safalta-purvak jud gaya hai! 🌸`);
-    }
-
-    function escapeHTML(str) {
-      return str.replace(/[&<>'"]/g, 
-        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-      );
-    }
-
-    // --- 6. Add to Google Calendar Helper ---
+    // --- 5. Add to Google Calendar Helper ---
     function addToCalendar(title, location, startTimeISO) {
       const start = startTimeISO.replace(/[-:]/g, '');
       const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${start}/${start}&location=${encodeURIComponent(location)}&details=${encodeURIComponent('Royal Wedding Ceremony & Celebrations. Cordially invited!')}`;
