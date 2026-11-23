@@ -1,31 +1,55 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>I am So Sorry ❤️ | Mera Pyara Sa Bacha</title>
-  <meta name="description" content="A special heartfelt apology for Mera Pyara Sa Bacha - 1000 times sorry from the bottom of my heart.">
-  <meta name="theme-color" content="#ff4d6d">
+  <title>Royal Rajasthani Wedding Invitation | Shubh Vivah</title>
+  <meta name="description" content="Cordially inviting you to celebrate the auspicious royal wedding ceremony. Shubh Vivah & Royal Reception.">
+  <meta name="theme-color" content="#841926">
 
-  <!-- Google Fonts -->
+  <!-- Open Graph for WhatsApp & Social Sharing -->
+  <meta property="og:title" content="Royal Wedding Invitation | Shubh Vivah">
+  <meta property="og:description" content="We cordially invite you to join us in celebrating our auspicious wedding ceremony. Click to view the royal invitation.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Royal Rajasthani & Heritage Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Short+Stack&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet">
 
   <style>
+    /* ==========================================================================
+       ROYAL RAJASTHANI HERITAGE CREAM & GOLD THEME
+       ========================================================================== */
     :root {
-      --primary: #ff4d6d;
-      --primary-dark: #c9184a;
-      --primary-light: #ff758f;
-      --soft-pink: #fff0f3;
-      --bg-cream: #fff8f9;
-      --card-bg: rgba(255, 255, 255, 0.88);
-      --card-border: rgba(255, 117, 143, 0.25);
-      --text-dark: #2b1118;
-      --text-muted: #6e4a52;
-      --gold: #f59e0b;
-      --shadow-sm: 0 4px 15px rgba(255, 77, 109, 0.12);
-      --shadow-lg: 0 16px 36px rgba(255, 77, 109, 0.2);
+      /* Cream & Ivory Base */
+      --bg-cream-light: #fefdf9;
+      --bg-cream: #faf5eb;
+      --bg-cream-dark: #f0e6d2;
+      --bg-card: rgba(255, 252, 246, 0.94);
+
+      /* Royal Rajasthani Accents */
+      --royal-maroon: #751422;
+      --royal-maroon-dark: #4e0a14;
+      --royal-maroon-light: #942030;
+      --antique-gold: #c59336;
+      --gold-bright: #e7bd5b;
+      --gold-dark: #91681a;
+      --gold-gradient: linear-gradient(135deg, #b88628 0%, #e9c26a 50%, #9e701e 100%);
+      --emerald-green: #1d4331;
+      --amber-warm: #d97706;
+
+      /* Typography Colors */
+      --text-maroon: #5a0c18;
+      --text-dark: #2a1b14;
+      --text-muted: #6b5744;
+      --text-gold: #9d7120;
+
+      /* Borders & Shadows */
+      --border-gold: rgba(197, 147, 54, 0.4);
+      --border-gold-strong: #c59336;
+      --shadow-royal: 0 16px 45px rgba(117, 20, 34, 0.12);
+      --shadow-soft: 0 6px 20px rgba(78, 10, 20, 0.06);
     }
 
     * {
@@ -36,975 +60,1019 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: linear-gradient(135deg, #fff0f3 0%, #ffccd5 50%, #fff0f3 100%);
+      font-family: 'Cormorant Garamond', serif;
+      background: var(--bg-cream);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(197, 147, 54, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(117, 20, 34, 0.05) 0%, transparent 45%),
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c59336' fill-opacity='0.04' fill-rule='evenodd'%3E%3Cpath d='M40 0l20 20-20 20-20-20L40 0zm0 80l20-20-20-20-20 20 20 20zM0 40l20 20-20 20-20-20L0 40zm80 0l20 20-20 20-20-20 20-20z'/%3E%3C/g%3E%3C/svg%3E");
       color: var(--text-dark);
       min-height: 100vh;
-      overflow-x: hidden;
       position: relative;
+      overflow-x: hidden;
+      line-height: 1.6;
     }
 
-    /* Floating Canvas Background */
-    #heartCanvas {
+    /* Falling Petals & Gold Dust Canvas */
+    #petalCanvas {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 0;
+      z-index: 10;
+    }
+
+    /* Top Royal Decorative Pattern Strip */
+    .royal-top-border {
+      height: 10px;
+      background: linear-gradient(90deg, #751422, #c59336, #e7bd5b, #c59336, #751422);
+      box-shadow: 0 2px 10px rgba(117, 20, 34, 0.2);
     }
 
     /* Container */
-    .container {
-      width: 100%;
-      max-width: 780px;
+    .invitation-container {
+      max-width: 860px;
       margin: 0 auto;
       padding: 24px 16px 80px;
       position: relative;
       z-index: 1;
     }
 
-    /* Floating Music & Theme Bar */
-    .top-controls {
+    /* Music Controller & Action Bar */
+    .top-actions {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 24px;
     }
 
-    .pill-badge {
+    .badge-heritage {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 8px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      padding: 7px 18px;
       border-radius: 50px;
-      font-size: 0.85rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.8rem;
       font-weight: 700;
-      color: var(--primary-dark);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--card-border);
-      animation: gentlePulse 2s infinite ease-in-out;
+      color: var(--royal-maroon);
+      box-shadow: var(--shadow-soft);
+      letter-spacing: 0.5px;
     }
 
     .music-btn {
-      background: white;
-      border: 1px solid var(--card-border);
-      color: var(--primary-dark);
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-gold-strong);
+      color: var(--royal-maroon);
       width: 44px;
       height: 44px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       cursor: pointer;
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-soft);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .music-btn:hover {
-      transform: scale(1.1) rotate(10deg);
-      background: var(--soft-pink);
+      transform: scale(1.08);
+      background: #fff;
+      border-color: var(--royal-maroon);
     }
     .music-btn.playing {
-      background: var(--primary);
-      color: white;
-      animation: spinSlow 6s linear infinite;
+      background: var(--royal-maroon);
+      color: var(--gold-bright);
+      animation: spinShehnai 10s linear infinite;
     }
 
-    /* Hero Card */
-    .hero-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-radius: 28px;
-      padding: 38px 24px 30px;
-      text-align: center;
-      border: 1px solid var(--card-border);
-      box-shadow: var(--shadow-lg);
+    /* ==========================================================================
+       ROYAL PALACE JHAROKHA ARCH (MAIN CARD)
+       ========================================================================== */
+    .palace-frame {
+      background: var(--bg-card);
+      border: 2px solid var(--border-gold-strong);
+      border-radius: 36px 36px 28px 28px;
+      padding: 48px 28px 44px;
+      box-shadow: var(--shadow-royal);
       position: relative;
+      text-align: center;
+      margin-bottom: 34px;
       overflow: hidden;
-      margin-bottom: 30px;
     }
 
-    .hero-card::before {
+    /* Inner Gold Filigree Inset Border */
+    .palace-frame::after {
       content: '';
       position: absolute;
-      top: -60px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 200px;
-      height: 120px;
-      background: radial-gradient(circle, rgba(255, 77, 109, 0.35) 0%, transparent 70%);
-      filter: blur(20px);
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 1px dashed var(--antique-gold);
+      border-radius: 28px 28px 20px 20px;
+      pointer-events: none;
+      opacity: 0.65;
     }
 
-    .hero-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #ff4d6d, #c9184a);
-      color: white;
-      padding: 6px 18px;
-      border-radius: 30px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-      box-shadow: 0 4px 12px rgba(201, 24, 74, 0.3);
+    /* Rajputana Arch Header Silhouette */
+    .arch-header {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto 16px;
+      display: block;
     }
 
-    .hero-title {
-      font-family: 'Great Vibes', cursive;
-      font-size: clamp(3.2rem, 9vw, 4.8rem);
-      color: var(--primary-dark);
-      line-height: 1.1;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(255, 77, 109, 0.15);
+    /* Shlok & Ganesha Motif */
+    .ganesha-icon-wrap {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #fcf6e8 0%, #faecd0 100%);
+      border: 1.5px solid var(--border-gold-strong);
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(197, 147, 54, 0.2);
     }
 
-    .hero-name {
-      font-size: clamp(1.4rem, 4vw, 1.9rem);
-      font-weight: 800;
+    .shree-ganeshay {
+      font-family: 'Rozha One', 'Yatra One', serif;
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
+      color: var(--royal-maroon);
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+    }
+
+    .sanskrit-shloka {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.7;
+      max-width: 580px;
+      margin: 0 auto 24px;
+    }
+
+    .ornament-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 18px auto 26px;
+      max-width: 320px;
+    }
+    .ornament-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--antique-gold), transparent);
+    }
+
+    /* Formal Invitation Welcome Note */
+    .formal-greeting {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.15rem, 3.5vw, 1.35rem);
       color: var(--text-dark);
-      margin-bottom: 14px;
+      margin-bottom: 24px;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .formal-greeting em {
+      font-style: normal;
+      color: var(--royal-maroon);
+      font-weight: 700;
+    }
+
+    /* Royal Couple Names Presentation */
+    .couple-container {
+      margin: 28px 0;
+      position: relative;
+    }
+
+    .person-card {
+      margin: 14px 0;
+    }
+
+    .person-role {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--antique-gold);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .person-name {
+      font-family: 'Rozha One', 'Cinzel Decorative', serif;
+      font-size: clamp(2rem, 6vw, 3rem);
+      color: var(--royal-maroon);
+      line-height: 1.15;
+      text-shadow: 1px 1px 2px rgba(117, 20, 34, 0.1);
+    }
+
+    .parentage {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    /* Wedding Knot / Weds Symbol */
+    .wedding-knot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    .weds-pill {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.6rem;
+      color: var(--antique-gold);
+      line-height: 1;
+      padding: 0 10px;
+    }
+
+    /* Host Family Line */
+    .host-banner {
+      background: linear-gradient(135deg, rgba(117, 20, 34, 0.05), rgba(197, 147, 54, 0.08));
+      border: 1px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-top: 28px;
+      font-size: 1.15rem;
+      color: var(--text-dark);
+    }
+    .host-banner strong {
+      color: var(--royal-maroon);
+      font-size: 1.25rem;
+    }
+
+    /* ==========================================================================
+       ROYAL COUNTDOWN CLOCK
+       ========================================================================== */
+    .countdown-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 22px;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 34px;
+    }
+
+    .countdown-title {
+      font-family: 'Rozha One', serif;
+      font-size: 1.25rem;
+      color: var(--royal-maroon);
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      flex-wrap: wrap;
     }
 
-    .hero-name .highlight {
-      background: linear-gradient(120deg, #ff4d6d, #ff758f);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-decoration: underline wavy var(--primary-light);
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 440px;
+      margin: 0 auto;
     }
 
-    .hero-tagline {
-      font-family: 'Caveat', cursive;
-      font-size: 1.45rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-      max-width: 580px;
-      margin: 0 auto 20px;
-    }
-
-    .confession-box {
-      background: rgba(255, 240, 243, 0.95);
-      border-left: 4px solid var(--primary);
-      padding: 16px 20px;
+    .time-slot {
+      background: white;
+      border: 1px solid rgba(197, 147, 54, 0.25);
       border-radius: 14px;
-      text-align: left;
-      font-size: 0.98rem;
-      line-height: 1.6;
-      color: #4a212b;
-      margin-top: 18px;
-      box-shadow: inset 0 2px 8px rgba(255, 77, 109, 0.05);
+      padding: 12px 6px;
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.02);
     }
 
-    .confession-box strong {
-      color: var(--primary-dark);
-    }
-
-    /* 1000 Sorries Interactive Section */
-    .section-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 24px;
-      padding: 30px 22px;
-      border: 1px solid var(--card-border);
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 30px;
-      position: relative;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 22px;
-    }
-
-    .section-header h2 {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--text-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .section-header p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    /* 1000 Sorry Meter */
-    .sorry-meter-box {
-      background: white;
-      border-radius: 20px;
-      padding: 24px 18px;
-      text-align: center;
-      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.03);
-      border: 1px solid rgba(255, 77, 109, 0.15);
-    }
-
-    .counter-display {
-      font-size: clamp(2.8rem, 8vw, 4rem);
-      font-weight: 900;
-      color: var(--primary-dark);
+    .time-value {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      line-height: 1;
-      margin-bottom: 4px;
-      letter-spacing: -1px;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--royal-maroon);
+      line-height: 1.1;
     }
 
-    .counter-label {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-muted);
+    .time-unit {
+      font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 14px;
-    }
-
-    .progress-track {
-      width: 100%;
-      height: 14px;
-      background: #fce4ec;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      position: relative;
-    }
-
-    .progress-fill {
-      width: 0%;
-      height: 100%;
-      background: linear-gradient(90deg, #ff758f, #ff4d6d, #c9184a);
-      border-radius: 10px;
-      transition: width 0.15s ease-out;
-      box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
-    }
-
-    .sorry-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 24px;
-      border-radius: 50px;
+      letter-spacing: 1px;
+      color: var(--antique-gold);
       font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      border: none;
-      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-      box-shadow: var(--shadow-sm);
+      margin-top: 2px;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, #ff4d6d, #c9184a);
-      color: white;
-    }
-    .btn-primary:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 8px 24px rgba(201, 24, 74, 0.35);
-    }
-
-    .btn-secondary {
-      background: white;
-      color: var(--primary-dark);
-      border: 1.5px solid var(--primary-light);
-    }
-    .btn-secondary:hover {
-      background: var(--soft-pink);
-      transform: translateY(-2px);
+    /* ==========================================================================
+       ITINERARY / CEREMONY EVENT CARDS (MUHURTHAM & RECEPTION)
+       ========================================================================== */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 24px;
     }
 
-    /* Live Sorry Bubble Stream */
-    .bubble-stream {
-      margin-top: 18px;
-      min-height: 52px;
-      padding: 10px 16px;
-      background: var(--soft-pink);
-      border-radius: 12px;
-      font-size: 0.95rem;
-      color: var(--primary-dark);
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
+    .section-heading h2 {
+      font-family: 'Rozha One', 'Cinzel Decorative', serif;
+      font-size: clamp(1.8rem, 5vw, 2.3rem);
+      color: var(--royal-maroon);
+      margin-bottom: 4px;
     }
 
-    /* Shayari Grid */
-    .shayari-grid {
+    .section-heading p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .events-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 24px;
+      margin-bottom: 34px;
     }
 
-    @media (min-width: 600px) {
-      .shayari-grid {
+    @media (min-width: 720px) {
+      .events-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    .shayari-card {
+    .event-card {
       background: white;
-      border-radius: 18px;
-      padding: 22px 18px;
-      border: 1px solid rgba(255, 117, 143, 0.2);
-      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--border-gold);
+      border-radius: 24px;
+      padding: 32px 22px 26px;
+      box-shadow: var(--shadow-royal);
       position: relative;
-      transition: transform 0.3s ease;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
     }
 
-    .shayari-card:hover {
-      transform: translateY(-4px);
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(117, 20, 34, 0.16);
+      border-color: var(--royal-maroon);
     }
 
-    .shayari-tag {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
+    .event-corner-pattern {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70px;
+      height: 70px;
+      pointer-events: none;
+      opacity: 0.15;
     }
 
-    .shayari-text {
-      font-family: 'Caveat', cursive;
-      font-size: 1.35rem;
-      line-height: 1.5;
-      color: #3b1821;
-      white-space: pre-line;
-      margin-bottom: 12px;
-    }
-
-    .shayari-sub {
-      font-size: 0.82rem;
-      color: #8a656d;
-      font-style: italic;
-      text-align: right;
-    }
-
-    /* Jokes & Masti Cards */
-    .joke-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 20px 18px;
-      border-left: 5px solid #f59e0b;
-      margin-bottom: 14px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-    }
-
-    .joke-card h4 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #92400e;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .joke-card p {
-      font-size: 0.94rem;
-      line-height: 1.6;
-      color: #4b321a;
-    }
-
-    /* Why I Am An Idiot Checklist */
-    .checklist {
-      list-style: none;
-      margin-top: 14px;
-    }
-    .checklist li {
-      padding: 10px 12px;
-      background: white;
-      margin-bottom: 8px;
-      border-radius: 12px;
-      font-size: 0.92rem;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-      border: 1px solid rgba(255, 77, 109, 0.1);
-    }
-    .checklist-icon {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    /* Love Coupons */
-    .coupons-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 14px;
-      margin-top: 16px;
-    }
-
-    .coupon-card {
-      background: linear-gradient(135deg, #fff5f7, #ffffff);
-      border: 2px dashed var(--primary-light);
-      border-radius: 16px;
-      padding: 18px 14px;
+    .event-header {
       text-align: center;
-      position: relative;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      margin-bottom: 18px;
     }
 
-    .coupon-card:hover {
-      transform: scale(1.03);
-      border-color: var(--primary);
-      background: #ffe3e8;
+    .event-icon-circle {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff7e6 0%, #faecd0 100%);
+      border: 1.5px solid var(--border-gold-strong);
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--royal-maroon);
     }
 
-    .coupon-card.redeemed {
-      background: #e8f5e9;
-      border-color: #4caf50;
-    }
-
-    .coupon-emoji {
-      font-size: 2rem;
-      margin-bottom: 6px;
-      display: block;
-    }
-
-    .coupon-title {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--text-dark);
+    .event-title {
+      font-family: 'Rozha One', serif;
+      font-size: 1.7rem;
+      color: var(--royal-maroon);
       margin-bottom: 4px;
     }
 
-    .coupon-desc {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .coupon-status {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: var(--primary-dark);
+    .event-tagline {
+      font-size: 0.98rem;
+      color: var(--antique-gold);
+      font-weight: 700;
       text-transform: uppercase;
-      background: white;
-      padding: 3px 10px;
-      border-radius: 20px;
+      letter-spacing: 1px;
     }
 
-    /* Final Forgiveness Interactive Arena */
-    .forgiveness-box {
-      text-align: center;
-      background: linear-gradient(135deg, #ffffff 0%, #fff0f3 100%);
-      border: 2px solid var(--primary-light);
-      border-radius: 26px;
-      padding: 36px 20px;
-      box-shadow: var(--shadow-lg);
-      margin-top: 36px;
-      position: relative;
-      min-height: 280px;
+    .event-details-list {
+      list-style: none;
+      margin: 16px 0 22px;
+    }
+
+    .event-details-item {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(197, 147, 54, 0.25);
+      font-size: 1.05rem;
+    }
+    .event-details-item:last-child {
+      border-bottom: none;
     }
 
-    .forgiveness-box h3 {
-      font-size: clamp(1.6rem, 5vw, 2.2rem);
-      font-weight: 800;
-      color: var(--text-dark);
-      margin-bottom: 8px;
-    }
-
-    .forgiveness-box p {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      max-width: 460px;
-    }
-
-    .decision-buttons {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      width: 100%;
-      min-height: 80px;
-    }
-
-    .btn-yes {
-      background: linear-gradient(135deg, #10b981, #059669);
-      color: white;
-      font-size: 1.15rem;
-      padding: 14px 34px;
-      border-radius: 50px;
-      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
-      z-index: 2;
-    }
-
-    .btn-yes:hover {
-      transform: scale(1.08);
-      box-shadow: 0 12px 28px rgba(16, 185, 129, 0.45);
-    }
-
-    .btn-no {
-      background: #f3f4f6;
-      color: #6b7280;
-      border: 1px solid #d1d5db;
-      font-size: 1rem;
-      padding: 14px 26px;
-      border-radius: 50px;
-      cursor: pointer;
-      position: relative;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-      user-select: none;
-    }
-
-    /* Modal for 1000 Sorries Book */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(43, 17, 24, 0.65);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-      padding: 16px;
-    }
-
-    .modal-content {
-      background: #ffffff;
-      width: 100%;
-      max-width: 620px;
-      height: 80vh;
-      border-radius: 24px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
-      animation: modalPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    .modal-header {
-      padding: 18px 22px;
-      background: var(--soft-pink);
-      border-bottom: 1px solid var(--card-border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .modal-header h3 {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--primary-dark);
-    }
-
-    .modal-close {
-      background: white;
-      border: 1px solid var(--card-border);
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+    .detail-icon {
       font-size: 1.2rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      color: var(--royal-maroon);
+      min-width: 24px;
+      margin-top: 2px;
+    }
+
+    .detail-content strong {
+      display: block;
+      color: var(--royal-maroon-dark);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+    }
+
+    .detail-content span {
       color: var(--text-dark);
+      font-size: 1.05rem;
     }
 
-    .modal-body {
-      padding: 16px 20px;
-      overflow-y: auto;
-      flex: 1;
-    }
-
-    .sorry-item {
-      padding: 10px 14px;
-      margin-bottom: 8px;
-      background: #fff8f9;
-      border-radius: 12px;
-      border-left: 3px solid var(--primary-light);
-      font-size: 0.92rem;
-      line-height: 1.4;
+    /* Event Action Buttons */
+    .event-actions {
       display: flex;
       gap: 10px;
+      margin-top: auto;
     }
 
-    .sorry-item .num {
-      font-weight: 800;
-      color: var(--primary);
-      min-width: 44px;
-    }
-
-    /* Success Celebration Overlay */
-    .success-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 240, 243, 0.96);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      display: none;
+    .btn-event {
+      flex: 1;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      z-index: 1000;
-      padding: 24px;
-      animation: fadeIn 0.4s ease;
+      gap: 6px;
+      padding: 11px 12px;
+      border-radius: 50px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
     }
 
-    .success-card {
-      background: white;
-      max-width: 520px;
-      padding: 44px 28px;
-      border-radius: 32px;
-      box-shadow: var(--shadow-lg);
-      border: 2px solid var(--primary-light);
+    .btn-maps {
+      background: var(--royal-maroon);
+      color: #fff;
+    }
+    .btn-maps:hover {
+      background: var(--royal-maroon-dark);
+      color: var(--gold-bright);
+    }
+
+    .btn-calendar {
+      background: #fff;
+      color: var(--royal-maroon);
+      border: 1px solid var(--border-gold-strong);
+    }
+    .btn-calendar:hover {
+      background: var(--bg-cream-dark);
+    }
+
+    /* ==========================================================================
+       BLESSINGS & INTERACTIVE GUESTBOOK CARD
+       ========================================================================== */
+    .blessing-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-gold);
+      border-radius: 28px;
+      padding: 34px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-royal);
+      margin-bottom: 34px;
       position: relative;
     }
 
-    .success-card .big-heart {
-      font-size: 5rem;
-      display: block;
-      margin-bottom: 12px;
-      animation: heartBeat 1.2s infinite ease-in-out;
+    .blessing-card h3 {
+      font-family: 'Rozha One', serif;
+      font-size: 1.65rem;
+      color: var(--royal-maroon);
+      margin-bottom: 8px;
     }
 
-    .success-card h2 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.6rem;
-      color: var(--primary-dark);
-      line-height: 1;
+    .blessing-card p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .blessing-form {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .input-royal {
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border-gold-strong);
+      background: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      outline: none;
+      transition: border 0.3s ease;
+    }
+    .input-royal:focus {
+      border-color: var(--royal-maroon);
+      box-shadow: 0 0 0 3px rgba(117, 20, 34, 0.1);
+    }
+
+    textarea.input-royal {
+      min-height: 85px;
+      resize: vertical;
+    }
+
+    .btn-bless {
+      background: linear-gradient(135deg, #751422, #942030);
+      color: var(--gold-bright);
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      border: 1px solid var(--antique-gold);
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(117, 20, 34, 0.25);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-bless:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(117, 20, 34, 0.35);
+    }
+
+    /* Floating Flower Shower Trigger Button */
+    .flower-shower-btn {
+      margin-top: 18px;
+      background: transparent;
+      border: 1.5px dashed var(--antique-gold);
+      color: var(--royal-maroon);
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .flower-shower-btn:hover {
+      background: rgba(197, 147, 54, 0.1);
+    }
+
+    /* Live Wishes Wall */
+    .wishes-wall {
+      margin-top: 24px;
+      max-height: 220px;
+      overflow-y: auto;
+      text-align: left;
+      padding: 10px 4px;
+    }
+    .wish-bubble {
+      background: white;
+      border-left: 3px solid var(--antique-gold);
+      padding: 12px 16px;
+      border-radius: 12px;
       margin-bottom: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+    .wish-sender {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--royal-maroon);
+    }
+    .wish-text {
+      font-size: 1rem;
+      color: var(--text-dark);
+      margin-top: 2px;
     }
 
-    .success-card p {
+    /* ==========================================================================
+       WHATSAPP SHARE & RSVP FOOTER
+       ========================================================================== */
+    .rsvp-card {
+      background: linear-gradient(135deg, #fffcf5 0%, #f7ecd4 100%);
+      border: 2px solid var(--border-gold);
+      border-radius: 24px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 34px;
+    }
+
+    .rsvp-title {
+      font-family: 'Rozha One', serif;
+      font-size: 1.5rem;
+      color: var(--royal-maroon);
+      margin-bottom: 6px;
+    }
+
+    .rsvp-desc {
       font-size: 1.05rem;
       color: var(--text-dark);
-      line-height: 1.6;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
 
-    /* Keyframe Animations */
-    @keyframes gentlePulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.03); }
+    .btn-share-wa {
+      background: #25D366;
+      color: white;
+      padding: 12px 26px;
+      border-radius: 50px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      transition: all 0.25s ease;
+    }
+    .btn-share-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
     }
 
-    @keyframes spinSlow {
+    /* Designer & Courtesy Border */
+    .designer-footer {
+      text-align: center;
+      border-top: 1px solid rgba(197, 147, 54, 0.3);
+      padding-top: 22px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .designer-footer strong {
+      color: var(--royal-maroon);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .designer-phone {
+      display: inline-block;
+      margin-top: 4px;
+      color: var(--antique-gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    /* Animations */
+    @keyframes spinShehnai {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
 
-    @keyframes heartBeat {
-      0%, 100% { transform: scale(1); }
-      20% { transform: scale(1.18); }
-      40% { transform: scale(1.08); }
-      60% { transform: scale(1.15); }
-      80% { transform: scale(1.03); }
-    }
-
-    @keyframes modalPop {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-    }
-    footer span {
-      color: var(--primary);
+    @keyframes floatGold {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
     }
   </style>
 </head>
 <body>
 
-  <!-- Background Heart Canvas -->
-  <canvas id="heartCanvas"></canvas>
+  <!-- Top Royal Golden Border Strip -->
+  <div class="royal-top-border"></div>
 
-  <div class="container">
-    <!-- Top Action Bar -->
-    <div class="top-controls">
-      <div class="pill-badge">
-        <span>💌</span> Official Apology Letter
+  <!-- Falling Rose & Marigold Petals Canvas -->
+  <canvas id="petalCanvas"></canvas>
+
+  <div class="invitation-container">
+
+    <!-- Top Navigation & Shehnai Audio -->
+    <div class="top-actions">
+      <div class="badge-heritage">
+        <span>👑</span> Royal Rajasthani Vivah
       </div>
-      <button class="music-btn" id="musicToggle" title="Play soothing romantic melody">
-        🎵
+      <button class="music-btn" id="musicToggle" title="Play Royal Shehnai & Sitar Ambiance">
+        🎺
       </button>
     </div>
 
-    <!-- Hero Card -->
-    <div class="hero-card">
-      <span class="hero-badge">A Heartfelt Confession</span>
-      <h1 class="hero-title">I Am Truly Sorry</h1>
-      <div class="hero-name">
-        To <span class="highlight">Mera Pyara Sa Bacha</span> ❤️
+    <!-- ====================================================================
+         MAIN RAJASTHANI PALACE JHAROKHA INVITATION CARD
+         ==================================================================== -->
+    <div class="palace-frame">
+
+      <!-- Lord Ganesha Auspicious Invocation -->
+      <div class="ganesha-icon-wrap">
+        <!-- Royal Ganesha SVG Emblem -->
+        <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 15C42 15 36 21 36 29C36 34 38 38 41 41C36 43 32 48 32 54C32 62 38 68 47 70C46 73 45 77 45 81C45 83 47 85 50 85C53 85 55 83 55 81C55 77 54 73 53 70C62 68 68 62 68 54C68 48 64 43 59 41C62 38 64 34 64 29C64 21 58 15 50 15Z" fill="#751422"/>
+          <circle cx="50" cy="27" r="4" fill="#c59336"/>
+          <path d="M48 35C48 35 45 42 45 52C45 61 52 64 54 64C56 64 57 62 57 60C57 58 53 58 52 52C51 46 53 38 53 35H48Z" fill="#c59336"/>
+          <path d="M30 46C24 46 22 51 22 55C22 60 26 63 30 63" stroke="#c59336" stroke-width="3" stroke-linecap="round"/>
+          <path d="M70 46C76 46 78 51 78 55C78 60 74 63 70 63" stroke="#c59336" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="43" cy="25" r="1.5" fill="#751422"/>
+          <circle cx="57" cy="25" r="1.5" fill="#751422"/>
+          <path d="M50 20V32M45 23H55" stroke="#e7bd5b" stroke-width="2" stroke-linecap="round"/>
+        </svg>
       </div>
-      <p class="hero-tagline">
-        "Mera pyara sa bacha ho tum... tum par bina wajah gussa karke maine duniya ki sabse badi galti kar di."
+
+      <h1 class="shree-ganeshay">॥ श्री गणेशाय नमः ॥</h1>
+      <p class="sanskrit-shloka">
+        "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>
+        निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥"
       </p>
 
-      <div class="confession-box">
-        <strong>Mere Pyare Se Bache,</strong><br>
-        Kal maine bina kisi baat ke, bina kisi wajah ke tum par faltu me gussa nikal diya. Us waqt mera dimag bilkul kharab tha, par iska matlab ye bilkul nahi tha ki tumhari koi galti thi. You didn't deserve that at all. Tum meri sabse pyari khushi ho, mera pyara sa bacha ho, aur maine tumhe hurt kar diya... I feel so terribly guilty. Dil se bohot bohot sorry! 🥺💔
-      </div>
-    </div>
-
-    <!-- 1000 Sorries Section -->
-    <div class="section-card">
-      <div class="section-header">
-        <h2><span>🙏</span> The 1000 Times Sorry Machine</h2>
-        <p>Ek do baar nahi, tumhare liye pure 1000 heartfelt sorries!</p>
+      <!-- Ornamental Rajasthani Divider -->
+      <div class="ornament-divider">
+        <div class="ornament-line"></div>
+        <span style="color: var(--antique-gold); font-size: 1.2rem;">❖ 𑁍 ❖</span>
+        <div class="ornament-line"></div>
       </div>
 
-      <div class="sorry-meter-box">
-        <div class="counter-display" id="sorryCounter">0</div>
-        <div class="counter-label">Sorries Sent to Mera Pyara Sa Bacha</div>
-
-        <div class="progress-track">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-
-        <div class="sorry-actions">
-          <button class="btn btn-primary" id="btnRapidSorry">
-            ⚡ Shower 1000 Sorries Right Now!
-          </button>
-          <button class="btn btn-secondary" id="btnManualSorry">
-            ➕ Send 1 By 1 (+1)
-          </button>
-          <button class="btn btn-secondary" id="btnOpenBook">
-            📖 Read All 1000 Sorries
-          </button>
-        </div>
-
-        <div class="bubble-stream" id="bubbleStream">
-          Click the button to shower your pyara sa bacha with love and sorries...
-        </div>
-      </div>
-    </div>
-
-    <!-- Shayari Section -->
-    <div class="section-card">
-      <div class="section-header">
-        <h2><span>🌹</span> Shayari Dil Se (Sirf Tumhare Liye)</h2>
-        <p>Gussa thoda kam karo aur ye lines padho please...</p>
-      </div>
-
-      <div class="shayari-grid">
-        <div class="shayari-card">
-          <span class="shayari-tag">Maafi Dil Se</span>
-          <p class="shayari-text">
-            "Gussa tera bilkul jayaz hai, 
-            galti poori meri thi...
-            Kal jo bina wajah chillaya, 
-            wo nadani meri thi...
-            Tu to sabse pyara hai, mera pyara sa bacha,
-            Maaf kar de mujhe, 
-            tere bina ye saari khushiyan adhoori thi."
-          </p>
-          <span class="shayari-sub">— For Mera Pyara Sa Bacha ❤️</span>
-        </div>
-
-        <div class="shayari-card">
-          <span class="shayari-tag">Maan Jao Na</span>
-          <p class="shayari-text">
-            "Ruthne ka poora haq hai tujhe, 
-            manane ka farz mera hai...
-            Tere chehre ki pyari si hasi par hi, 
-            to basera mera hai...
-            Galti ho gayi mujhse, ab muskura bhi do,
-            Tujhse hi shuru aur tujhpe hi khatam, 
-            har sawera mera hai."
-          </p>
-          <span class="shayari-sub">— Tera Duffer 🙈</span>
-        </div>
-
-        <div class="shayari-card">
-          <span class="shayari-tag">Dhadkan Tum Ho</span>
-          <p class="shayari-text">
-            "Narazgi teri hume gawara nahi,
-            Tere siwa is dil ko koi pyara nahi...
-            Ek baar pyaar se gale laga lo bacha,
-            Tere bina is aashiq ka koi sahara nahi."
-          </p>
-          <span class="shayari-sub">— Infinite Love 💖</span>
-        </div>
-
-        <div class="shayari-card">
-          <span class="shayari-tag">Promise Of Love</span>
-          <p class="shayari-text">
-            "Wada hai ab gussa kabhi aane nahi dunga,
-            Tere pyare se chehre ki hasi jane nahi dunga...
-            Chahe kitni bhi mushkil kyu na ho zindagi me,
-            Tujhe kisi aur baat se ghamzada hone nahi dunga."
-          </p>
-          <span class="shayari-sub">— Pakka Promise 🤞</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Reasons Why You Are An Angel Section -->
-    <div class="section-card">
-      <div class="section-header">
-        <h2><span>👑</span> 5 Reasons Why You Are An Angel</h2>
-        <p>Aur kal bina baat ke gussa karke mai kitna galat tha...</p>
-      </div>
-
-      <ul class="checklist">
-        <li>
-          <span class="checklist-icon">🥺</span>
-          <span><strong>Reason 1:</strong> Kal bina kisi baat ke gussa karke maine bohot badi galti ki, you didn't deserve that at all.</span>
-        </li>
-        <li>
-          <span class="checklist-icon">👑</span>
-          <span><strong>Reason 2:</strong> Tum ek masoom pyari angel ho jo sirf bepanah pyaar aur respect deserve karti hai.</span>
-        </li>
-        <li>
-          <span class="checklist-icon">🙇‍♂️</span>
-          <span><strong>Reason 3:</strong> Galti 100% meri thi aur mai dil se sharminda hu.</span>
-        </li>
-        <li>
-          <span class="checklist-icon">💔</span>
-          <span><strong>Reason 4:</strong> Tumhe thoda sa bhi sad ya hurt dekh kar mera dil baith jaata hai.</span>
-        </li>
-        <li>
-          <span class="checklist-icon">❤️</span>
-          <span><strong>Reason 5:</strong> Love you more than words could ever describe, mere pyare se bache!</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Apology Love Coupons -->
-    <div class="section-card">
-      <div class="section-header">
-        <h2><span>🎟️</span> Peace Treaty Coupons (For Mera Pyara Sa Bacha)</h2>
-        <p>Tap any coupon to redeem it instantly!</p>
-      </div>
-
-      <div class="coupons-grid">
-        <div class="coupon-card" onclick="redeemCoupon(this, 'Unlimited Hugs')">
-          <span class="coupon-emoji">🫂</span>
-          <div class="coupon-title">Tight Bear Hug</div>
-          <div class="coupon-desc">Jab tak bache ka gussa thanda na ho tab tak hug!</div>
-          <span class="coupon-status">Tap to Redeem</span>
-        </div>
-
-        <div class="coupon-card" onclick="redeemCoupon(this, 'Ice Cream Date')">
-          <span class="coupon-emoji">🍨</span>
-          <div class="coupon-title">Favourite Ice Cream</div>
-          <div class="coupon-desc">Tumhari pasand ki ice cream + chocolate treat!</div>
-          <span class="coupon-status">Tap to Redeem</span>
-        </div>
-
-        <div class="coupon-card" onclick="redeemCoupon(this, '24h Yes Man')">
-          <span class="coupon-emoji">🫡</span>
-          <div class="coupon-title">24-Hour Yes-Man</div>
-          <div class="coupon-desc">Pure 24 ghante tum jo kahogi, bina argument 'Yes'!</div>
-          <span class="coupon-status">Tap to Redeem</span>
-        </div>
-
-        <div class="coupon-card" onclick="redeemCoupon(this, 'Head Massage')">
-          <span class="coupon-emoji">💆‍♀️</span>
-          <div class="coupon-title">Princess Treatment</div>
-          <div class="coupon-desc">Champi, pampering aur unlimited compliments!</div>
-          <span class="coupon-status">Tap to Redeem</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Interactive Forgiveness Box -->
-    <div class="forgiveness-box" id="forgivenessBox">
-      <h3>Mere Pyare Se Bache, Maan Jao Na Please? 🥺❤️</h3>
-      <p>Mera pyara sa bacha, apne iss duffer ko maaf kar do na? Ab dobara aisa kabhi nahi hoga, promise!</p>
-
-      <div class="decision-buttons">
-        <button class="btn btn-yes" id="btnYes">
-          Haan, Maan Gayi! 🥰❤️
-        </button>
-        <button class="btn-no" id="btnNo">
-          Nahi, Abhi Bhi Gussa Hu! 😤
-        </button>
-      </div>
-    </div>
-
-    <footer>
-      Crafted with infinite love, 1000 sorries & endless hugs for <span>Mera Pyara Sa Bacha</span>.<br>
-      You are my today, my tomorrow, and my entire life. ❤️
-    </footer>
-  </div>
-
-  <!-- 1000 Sorries Modal -->
-  <div class="modal-overlay" id="sorryModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>📖 1000 Sorries For Mera Pyara Sa Bacha</h3>
-        <button class="modal-close" id="modalClose">&times;</button>
-      </div>
-      <div class="modal-body" id="modalSorryList">
-        <!-- Generated dynamically -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Success Celebration Overlay -->
-  <div class="success-overlay" id="successOverlay">
-    <div class="success-card">
-      <span class="big-heart">💖</span>
-      <h2>Yay! Thank You Mere Pyare Se Bache!</h2>
-      <p>
-        Love you so, so, so much! ❤️<br>
-        Thank you for forgiving your pyara sa duffer. You just made my entire world bright again! Ab jaldi se pyari si smile de do! 😊
+      <!-- Formal Royal Invitation Request -->
+      <p class="formal-greeting">
+        With the divine grace of Almighty God and blessings of our revered ancestors,<br>
+        we solicit your gracious presence and heartfelt blessings on the auspicious occasion<br>
+        of the wedding ceremony of our beloved children
       </p>
-      <button class="btn btn-primary" onclick="closeSuccess()" style="padding: 12px 30px;">
-        Forever Yours ❤️
+
+      <!-- Couple Presentation Section -->
+      <div class="couple-container">
+
+        <!-- Groom -->
+        <div class="person-card">
+          <div class="person-role">The Royal Groom</div>
+          <h2 class="person-name" id="groomName">Groom Name</h2>
+          <div class="parentage" id="groomParents">
+            Son of <strong>Mrs. Mother's Name</strong> &amp; <strong>Mr. Father's Name</strong>
+          </div>
+        </div>
+
+        <!-- Weds Knot -->
+        <div class="wedding-knot">
+          <div class="ornament-line" style="max-width: 100px;"></div>
+          <span class="weds-pill">weds</span>
+          <div class="ornament-line" style="max-width: 100px;"></div>
+        </div>
+
+        <!-- Bride -->
+        <div class="person-card">
+          <div class="person-role">The Royal Bride</div>
+          <h2 class="person-name" id="brideName">Bride Name</h2>
+          <div class="parentage" id="brideParents">
+            Daughter of <strong>Mrs. Mother's Name</strong> &amp; <strong>Mr. Father's Name</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Host Family Banner -->
+      <div class="host-banner" id="hostBanner">
+        Cordially Hosted by: <br>
+        <strong>Awaiting - Family Name</strong>
+      </div>
+
+    </div>
+
+    <!-- ====================================================================
+         COUNTDOWN TO THE AUSPICIOUS CEREMONY
+         ==================================================================== -->
+    <div class="countdown-card">
+      <div class="countdown-title">
+        <span>⏳</span> Counting Down to the Auspicious Day
+      </div>
+      <div class="countdown-grid">
+        <div class="time-slot">
+          <div class="time-value" id="daysCount">--</div>
+          <div class="time-unit">Days</div>
+        </div>
+        <div class="time-slot">
+          <div class="time-value" id="hoursCount">--</div>
+          <div class="time-unit">Hours</div>
+        </div>
+        <div class="time-slot">
+          <div class="time-value" id="minsCount">--</div>
+          <div class="time-unit">Mins</div>
+        </div>
+        <div class="time-slot">
+          <div class="time-value" id="secsCount">--</div>
+          <div class="time-unit">Secs</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         FUNCTIONS & CEREMONIES (ITINERARY)
+         ==================================================================== -->
+    <div class="section-heading">
+      <h2>Wedding Ceremonies</h2>
+      <p>Join us in celebrating the rituals of love, tradition and togetherness</p>
+    </div>
+
+    <div class="events-grid">
+
+      <!-- Event 1: Shubh Muhurtham / Vivah Sanskar -->
+      <div class="event-card">
+        <div>
+          <div class="event-header">
+            <div class="event-icon-circle">
+              <!-- Sacred Fire / Havan Kund SVG Icon -->
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C10.5 4 9 6.5 9 8.5C9 10.4 10.3 12 12 12C13.7 12 15 10.4 15 8.5C15 6.5 13.5 4 12 2ZM6 19C5.4 19 5 19.4 5 20C5 20.6 5.4 21 6 21H18C18.6 21 19 20.6 19 20C19 19.4 18.6 19 18 19H17L15.5 14.5C15.2 13.6 14.4 13 13.5 13H10.5C9.6 13 8.8 13.6 8.5 14.5L7 19H6Z"/>
+              </svg>
+            </div>
+            <h3 class="event-title">Shubh Muhurtham</h3>
+            <span class="event-tagline">Vedic Vivah Sanskar</span>
+          </div>
+
+          <ul class="event-details-list">
+            <li class="event-details-item">
+              <span class="detail-icon">📅</span>
+              <div class="detail-content">
+                <strong>Date</strong>
+                <span id="muhurthamDate">Wednesday, 11th May 20XX</span>
+              </div>
+            </li>
+            <li class="event-details-item">
+              <span class="detail-icon">⏰</span>
+              <div class="detail-content">
+                <strong>Auspicious Time</strong>
+                <span>9:30 AM onwards</span>
+              </div>
+            </li>
+            <li class="event-details-item">
+              <span class="detail-icon">📍</span>
+              <div class="detail-content">
+                <strong>Venue</strong>
+                <span id="muhurthamVenue">Hotel Name Here, Address Here, Address Here</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="event-actions">
+          <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-event btn-maps">
+            <span>🗺️</span> View Map
+          </a>
+          <button class="btn-event btn-calendar" onclick="addToCalendar('Shubh Muhurtham Wedding', 'Hotel Name Here', '2026-05-11T09:30:00')">
+            <span>📅</span> Add to Cal
+          </button>
+        </div>
+      </div>
+
+      <!-- Event 2: Royal Reception -->
+      <div class="event-card">
+        <div>
+          <div class="event-header">
+            <div class="event-icon-circle">
+              <!-- Royal Palace / Celebration SVG Icon -->
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3L2 12H5V20H19V12H22L12 3ZM12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8ZM15 18H9V14C9 13.2 9.5 12.6 10.2 12.2C10.8 12.1 11.4 12 12 12C12.6 12 13.2 12.1 13.8 12.2C14.5 12.6 15 13.2 15 14V18Z"/>
+              </svg>
+            </div>
+            <h3 class="event-title">Royal Reception</h3>
+            <span class="event-tagline">Dinner &amp; Celebrations</span>
+          </div>
+
+          <ul class="event-details-list">
+            <li class="event-details-item">
+              <span class="detail-icon">📅</span>
+              <div class="detail-content">
+                <strong>Date</strong>
+                <span id="receptionDate">Thursday, 12th May 20XX</span>
+              </div>
+            </li>
+            <li class="event-details-item">
+              <span class="detail-icon">⏰</span>
+              <div class="detail-content">
+                <strong>Evening Time</strong>
+                <span>7:30 PM onwards</span>
+              </div>
+            </li>
+            <li class="event-details-item">
+              <span class="detail-icon">📍</span>
+              <div class="detail-content">
+                <strong>Venue</strong>
+                <span id="receptionVenue">Hotel Name Here, Address Here, Address Here</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="event-actions">
+          <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-event btn-maps">
+            <span>🗺️</span> View Map
+          </a>
+          <button class="btn-event btn-calendar" onclick="addToCalendar('Royal Wedding Reception', 'Hotel Name Here', '2026-05-12T19:30:00')">
+            <span>📅</span> Add to Cal
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ====================================================================
+         SHUBH AASHIRWAD / GUEST BLESSINGS (INTERACTIVE)
+         ==================================================================== -->
+    <div class="blessing-card">
+      <h3>Shubh Aashirwad (Send Blessings)</h3>
+      <p>Your warm wishes and blessings are the most precious gift for the newlyweds.</p>
+
+      <form class="blessing-form" id="blessingForm" onsubmit="handleSendBlessing(event)">
+        <input type="text" class="input-royal" id="guestNameInput" placeholder="Your Good Name" required>
+        <textarea class="input-royal" id="guestWishInput" placeholder="Write your heartfelt blessing & wishes..." required></textarea>
+        <button type="submit" class="btn-bless">
+          <span>🌸</span> Send Your Blessings
+        </button>
+      </form>
+
+      <button type="button" class="flower-shower-btn" onclick="triggerFlowerRain(70)">
+        <span>✨</span> Shower Royal Rose Petals
       </button>
+
+      <div class="wishes-wall" id="wishesWall">
+        <div class="wish-bubble">
+          <div class="wish-sender">Mr. &amp; Mrs. Sharma</div>
+          <div class="wish-text">Wishing the royal couple a lifetime of joy, harmony, and eternal prosperity! May God bless your new journey! 🌹</div>
+        </div>
+      </div>
     </div>
+
+    <!-- ====================================================================
+         SHARE ON WHATSAPP & RSVP DETAILS
+         ==================================================================== -->
+    <div class="rsvp-card">
+      <h3 class="rsvp-title">Share Invitation</h3>
+      <p class="rsvp-desc">Forward this auspicious royal invitation to family, elders, and dear friends on WhatsApp.</p>
+      <a id="btnShareWhatsApp" href="#" target="_blank" class="btn-share-wa">
+        <!-- WhatsApp Icon SVG -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.56 20.15 9.11 19.75 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15Z"/>
+        </svg>
+        Share on WhatsApp
+      </a>
+    </div>
+
+    <!-- ====================================================================
+         BORDER & DESIGNER FOOTER CREDITS
+         ==================================================================== -->
+    <div class="designer-footer">
+      <div>Auspicious Wedding Invitation | Designed with Royal Rajasthani Grandeur</div>
+      <div>Designed by: <strong>Suavasar Invites</strong></div>
+      <a href="tel:+919689192288" class="designer-phone">📞 +91 96891 92288</a>
+    </div>
+
   </div>
 
-  <!-- Audio Synthesizer (Zero External Dependencies) & Interactive Scripts -->
+  <!-- ====================================================================
+       INTERACTIVE JAVASCRIPT: PETALS, AUDIO, DYNAMIC CUSTOMIZATION, CALENDAR
+       ==================================================================== -->
   <script>
-    // --- Floating Hearts Background Canvas ---
-    const canvas = document.getElementById('heartCanvas');
+    // --- 1. Dynamic URL Parameter Customizer (Optional Overrides) ---
+    // Anyone can customize by visiting: ?groom=Vikram&bride=Ananya&hosts=Rathore+Family
+    (function initCustomizer() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const groom = urlParams.get('groom');
+      const bride = urlParams.get('bride');
+      const hosts = urlParams.get('hosts');
+      const gParents = urlParams.get('gparents');
+      const bParents = urlParams.get('bparents');
+
+      if (groom) document.getElementById('groomName').textContent = groom;
+      if (bride) document.getElementById('brideName').textContent = bride;
+      if (hosts) document.getElementById('hostBanner').innerHTML = `Cordially Hosted by:<br><strong>The ${hosts}</strong>`;
+      if (gParents) document.getElementById('groomParents').textContent = gParents;
+      if (bParents) document.getElementById('brideParents').textContent = bParents;
+
+      // Update WhatsApp Share Link
+      const shareTitle = encodeURIComponent(`👑 Royal Rajasthani Wedding Invitation 👑\n\nYou are cordially invited to celebrate the Shubh Vivah ceremony.\n\nDate: 11th & 12th May\nClick here to view the invitation: `);
+      const pageUrl = encodeURIComponent(window.location.href);
+      document.getElementById('btnShareWhatsApp').href = `https://api.whatsapp.com/send?text=${shareTitle}${pageUrl}`;
+    })();
+
+    // --- 2. Falling Rose & Marigold Petals (HTML5 Canvas) ---
+    const canvas = document.getElementById('petalCanvas');
     const ctx = canvas.getContext('2d');
     let width = canvas.width = window.innerWidth;
     let height = canvas.height = window.innerHeight;
@@ -1014,29 +1082,38 @@
       height = canvas.height = window.innerHeight;
     });
 
-    const hearts = [];
-    const heartColors = ['#ff4d6d', '#ff758f', '#ff8fa3', '#c9184a', '#ffccd5'];
+    const petalColors = [
+      '#8f1d2c', // Royal Dark Red Rose
+      '#b91c1c', // Crimson Rose
+      '#e11d48', // Vibrant Rose Pink
+      '#f59e0b', // Marigold Saffron
+      '#fbbf24', // Marigold Yellow
+      '#d97706'  // Deep Amber
+    ];
 
-    class FloatingHeart {
+    class Petal {
       constructor() {
         this.reset();
       }
       reset() {
         this.x = Math.random() * width;
-        this.y = height + 20;
-        this.size = Math.random() * 14 + 10;
-        this.speedY = Math.random() * 1.5 + 0.6;
-        this.speedX = (Math.random() - 0.5) * 0.8;
-        this.color = heartColors[Math.floor(Math.random() * heartColors.length)];
-        this.opacity = Math.random() * 0.6 + 0.3;
+        this.y = -20;
+        this.size = Math.random() * 12 + 8;
+        this.speedY = Math.random() * 1.6 + 0.8;
+        this.speedX = Math.random() * 1.2 - 0.6;
+        this.color = petalColors[Math.floor(Math.random() * petalColors.length)];
         this.rotation = Math.random() * Math.PI * 2;
-        this.rotSpeed = (Math.random() - 0.5) * 0.03;
+        this.rotationSpeed = (Math.random() - 0.5) * 0.03;
+        this.flip = Math.random() * Math.PI;
+        this.flipSpeed = Math.random() * 0.04 + 0.01;
+        this.opacity = Math.random() * 0.5 + 0.5;
       }
       update() {
-        this.y -= this.speedY;
-        this.x += this.speedX;
-        this.rotation += this.rotSpeed;
-        if (this.y < -30 || this.x < -20 || this.x > width + 20) {
+        this.y += this.speedY;
+        this.x += this.speedX + Math.sin(this.y * 0.02) * 0.5;
+        this.rotation += this.rotationSpeed;
+        this.flip += this.flipSpeed;
+        if (this.y > height + 20) {
           this.reset();
         }
       }
@@ -1044,94 +1121,117 @@
         ctx.save();
         ctx.translate(this.x, this.y);
         ctx.rotate(this.rotation);
+        ctx.scale(1, Math.sin(this.flip));
         ctx.globalAlpha = this.opacity;
         ctx.fillStyle = this.color;
 
         ctx.beginPath();
-        const topCurveHeight = this.size * 0.3;
-        ctx.moveTo(0, topCurveHeight);
-        ctx.bezierCurveTo(0, 0, -this.size / 2, 0, -this.size / 2, topCurveHeight);
-        ctx.bezierCurveTo(-this.size / 2, (this.size + topCurveHeight) / 2, 0, (this.size + topCurveHeight) / 2, 0, this.size);
-        ctx.bezierCurveTo(0, (this.size + topCurveHeight) / 2, this.size / 2, (this.size + topCurveHeight) / 2, this.size / 2, topCurveHeight);
-        ctx.bezierCurveTo(this.size / 2, 0, 0, 0, 0, topCurveHeight);
-        ctx.closePath();
+        ctx.moveTo(0, 0);
+        ctx.bezierCurveTo(this.size / 2, -this.size / 2, this.size, 0, this.size / 2, this.size);
+        ctx.bezierCurveTo(0, this.size * 0.8, -this.size / 2, this.size / 2, 0, 0);
         ctx.fill();
 
         ctx.restore();
       }
     }
 
-    for (let i = 0; i < 35; i++) {
-      hearts.push(new FloatingHeart());
+    const petals = [];
+    for (let i = 0; i < 28; i++) {
+      petals.push(new Petal());
     }
 
-    function animateHearts() {
+    function animatePetals() {
       ctx.clearRect(0, 0, width, height);
-      hearts.forEach(h => {
-        h.update();
-        h.draw();
+      petals.forEach(p => {
+        p.update();
+        p.draw();
       });
-      requestAnimationFrame(animateHearts);
+      requestAnimationFrame(animatePetals);
     }
-    animateHearts();
+    animatePetals();
 
-    // --- Soft Ambient Romantic Music Synthesizer (Web Audio API) ---
+    // Trigger Burst of Flower Rain
+    function triggerFlowerRain(count = 60) {
+      for (let i = 0; i < count; i++) {
+        const p = new Petal();
+        p.y = Math.random() * (height * 0.3);
+        p.speedY = Math.random() * 3 + 2;
+        petals.push(p);
+      }
+      setTimeout(() => {
+        petals.splice(28); // return to normal baseline
+      }, 5000);
+    }
+
+    // --- 3. Royal Shehnai & Sitar Synthesizer (Web Audio API) ---
     let audioCtx = null;
-    let isPlaying = false;
-    let melodyTimer = null;
+    let isMusicPlaying = false;
+    let ragaInterval = null;
     const musicBtn = document.getElementById('musicToggle');
 
-    const romanceNotes = [
-      261.63, // C4
-      293.66, // D4
-      329.63, // E4
-      392.00, // G4
-      440.00, // A4
-      523.25, // C5
-      587.33, // D5
-      659.25  // E5
+    // Indian Classical Raga Yaman / Bilawal Frequencies (Sa, Re, Ga, Ma, Pa, Dha, Ni, Sa')
+    const ragaNotes = [
+      261.63, // C4 (Sa)
+      293.66, // D4 (Re)
+      329.63, // E4 (Ga)
+      369.99, // F#4 (Teevra Ma)
+      392.00, // G4 (Pa)
+      440.00, // A4 (Dha)
+      493.88, // B4 (Ni)
+      523.25, // C5 (Taar Sa)
+      587.33  // D5 (Taar Re)
     ];
 
-    function playSoftPluck(freq, duration = 1.6) {
+    function playIndianInstrumentNote(freq, type = 'shehnai', duration = 2.0) {
       if (!audioCtx) return;
       try {
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
 
-        osc.type = 'sine';
+        // Shehnai has rich harmonic overtone profile (sawtooth + gentle filtering)
+        osc.type = (type === 'shehnai') ? 'sawtooth' : 'triangle';
         osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
 
+        // Low pass filter for soft warm acoustic tone
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(1400, audioCtx.currentTime);
+
         gain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
-        gain.gain.linearRampToValueAtTime(0.08, audioCtx.currentTime + 0.08);
+        gain.gain.linearRampToValueAtTime(0.07, audioCtx.currentTime + 0.12);
         gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
 
-        osc.connect(gain);
+        osc.connect(filter);
+        filter.connect(gain);
         gain.connect(audioCtx.destination);
 
         osc.start();
         osc.stop(audioCtx.currentTime + duration);
-      } catch (e) {
-        console.error(e);
+      } catch (err) {
+        console.error(err);
       }
     }
 
-    function startMelodyLoop() {
+    function startRoyalAmbiance() {
       const melodySequence = [
-        romanceNotes[0], romanceNotes[2], romanceNotes[3], romanceNotes[4],
-        romanceNotes[5], romanceNotes[4], romanceNotes[3], romanceNotes[2],
-        romanceNotes[1], romanceNotes[3], romanceNotes[4], romanceNotes[6]
+        ragaNotes[0], ragaNotes[2], ragaNotes[4], ragaNotes[6],
+        ragaNotes[7], ragaNotes[6], ragaNotes[4], ragaNotes[2],
+        ragaNotes[1], ragaNotes[3], ragaNotes[4], ragaNotes[7]
       ];
       let step = 0;
 
-      melodyTimer = setInterval(() => {
-        if (!isPlaying) return;
+      ragaInterval = setInterval(() => {
+        if (!isMusicPlaying) return;
         const note = melodySequence[step % melodySequence.length];
-        playSoftPluck(note, 2.0);
+        playIndianInstrumentNote(note, 'shehnai', 2.2);
+
+        // Tanpura constant drone chord every 4 steps
         if (step % 4 === 0) {
-          playSoftPluck(romanceNotes[0] / 2, 2.5); // Warm bass note
+          playIndianInstrumentNote(ragaNotes[0] / 2, 'sitar', 3.0); // Low Root Sa
+          playIndianInstrumentNote(ragaNotes[4] / 2, 'sitar', 3.0); // Low Pa
         }
         step++;
-      }, 480);
+      }, 550);
     }
 
     musicBtn.addEventListener('click', () => {
@@ -1142,244 +1242,83 @@
         audioCtx.resume();
       }
 
-      isPlaying = !isPlaying;
-      if (isPlaying) {
+      isMusicPlaying = !isMusicPlaying;
+      if (isMusicPlaying) {
         musicBtn.classList.add('playing');
-        musicBtn.innerHTML = '💖';
-        startMelodyLoop();
+        musicBtn.innerHTML = '🎶';
+        startRoyalAmbiance();
       } else {
         musicBtn.classList.remove('playing');
-        musicBtn.innerHTML = '🎵';
-        clearInterval(melodyTimer);
+        musicBtn.innerHTML = '🎺';
+        clearInterval(ragaInterval);
       }
     });
 
-    // --- 1000 Sorries Generator & Counter ---
-    let currentCount = 0;
-    const targetCount = 1000;
-    const counterDisplay = document.getElementById('sorryCounter');
-    const progressFill = document.getElementById('progressFill');
-    const bubbleStream = document.getElementById('bubbleStream');
-    const btnRapidSorry = document.getElementById('btnRapidSorry');
-    const btnManualSorry = document.getElementById('btnManualSorry');
-    const btnOpenBook = document.getElementById('btnOpenBook');
+    // --- 4. Auspicious Countdown Clock ---
+    // Target: 11th May 9:30 AM (Set for upcoming wedding season)
+    const weddingDate = new Date('2026-05-11T09:30:00');
 
-    function updateCounterDisplay(newVal) {
-      currentCount = Math.min(newVal, targetCount);
-      counterDisplay.textContent = currentCount;
-      const pct = (currentCount / targetCount) * 100;
-      progressFill.style.width = pct + '%';
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = weddingDate.getTime() - now;
 
-      if (currentCount > 0) {
-        bubbleStream.innerHTML = `<strong>Sorry #${currentCount}</strong>`;
-      }
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-      if (currentCount >= targetCount) {
-        bubbleStream.innerHTML = `🎉 <strong>1000/1000 Complete!</strong> Pure 1000 baar Sorry! Ab to maaf kar do mera pyara sa bacha! ❤️`;
-        triggerConfetti(50);
+        document.getElementById('daysCount').textContent = String(days).padStart(2, '0');
+        document.getElementById('hoursCount').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minsCount').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('secsCount').textContent = String(seconds).padStart(2, '0');
+      } else {
+        document.getElementById('daysCount').textContent = '00';
+        document.getElementById('hoursCount').textContent = '00';
+        document.getElementById('minsCount').textContent = '00';
+        document.getElementById('secsCount').textContent = '00';
       }
     }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
 
-    // Rapid 1000 Counter Animation
-    btnRapidSorry.addEventListener('click', () => {
-      if (currentCount >= targetCount) {
-        updateCounterDisplay(targetCount);
-        return;
-      }
-      btnRapidSorry.disabled = true;
-      btnRapidSorry.textContent = "Sending 1000 Sorries... 💌";
-
-      const start = currentCount;
-      const diff = targetCount - start;
-      const duration = 1800; // ms
-      const startTime = performance.now();
-
-      function step(now) {
-        const elapsed = now - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        // ease-out cubic
-        const ease = 1 - Math.pow(1 - progress, 3);
-        const val = Math.round(start + diff * ease);
-        updateCounterDisplay(val);
-
-        if (progress < 1) {
-          requestAnimationFrame(step);
-        } else {
-          updateCounterDisplay(targetCount);
-          btnRapidSorry.disabled = false;
-          btnRapidSorry.textContent = "✨ Sent All 1000 Sorries!";
-        }
-      }
-      requestAnimationFrame(step);
-    });
-
-    btnManualSorry.addEventListener('click', () => {
-      if (currentCount < targetCount) {
-        updateCounterDisplay(currentCount + 1);
-        triggerMiniHeart(btnManualSorry);
-      }
-    });
-
-    // Populate and View 1000 Sorries Modal
-    let isModalPopulated = false;
-    const modal = document.getElementById('sorryModal');
-    const modalList = document.getElementById('modalSorryList');
-    const modalClose = document.getElementById('modalClose');
-
-    btnOpenBook.addEventListener('click', () => {
-      if (!isModalPopulated) {
-        populate1000Sorries();
-        isModalPopulated = true;
-      }
-      modal.style.display = 'flex';
-    });
-
-    modalClose.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) modal.style.display = 'none';
-    });
-
-    function populate1000Sorries() {
-      const fragment = document.createDocumentFragment();
-      for (let i = 1; i <= 1000; i++) {
-        const div = document.createElement('div');
-        div.className = 'sorry-item';
-        div.innerHTML = `<span class="num">#${i}</span> <span>Sorry</span>`;
-        fragment.appendChild(div);
-      }
-      modalList.appendChild(fragment);
-    }
-
-    // --- Interactive "Runaway No" Button ---
-    const btnNo = document.getElementById('btnNo');
-    const btnYes = document.getElementById('btnYes');
-    const successOverlay = document.getElementById('successOverlay');
-
-    const noTexts = [
-      "Nahi, Abhi Bhi Gussa Hu! 😤",
-      "Pakka nahi manoge? 🥺",
-      "Dekho me ro dunga abhi! 😭",
-      "Ice cream khilaunga pakka! 🍨",
-      "Bache pe thoda taras khao! 🙈",
-      "Itna gussa health ke liye bura h! ❤️",
-      "Achha sorry na mere pyare se bache! 🫂",
-      "Dekho button bhi bhaag raha hai! 😂",
-      "Bas ek aakhri baar maaf kar do! 🙏"
-    ];
-    let noClickCount = 0;
-
-    function moveNoButton() {
-      noClickCount++;
-      btnNo.textContent = noTexts[noClickCount % noTexts.length];
-
-      // Grow Yes button progressively
-      const currentScale = 1 + (noClickCount * 0.1);
-      btnYes.style.transform = `scale(${Math.min(currentScale, 1.6)})`;
-
-      const parent = btnNo.parentElement;
-      const rect = parent.getBoundingClientRect();
-      const maxX = rect.width - btnNo.offsetWidth - 20;
-      const maxY = rect.height - btnNo.offsetHeight - 10;
-
-      const randX = Math.max(10, Math.floor(Math.random() * (maxX > 20 ? maxX : 80)));
-      const randY = Math.max(-40, Math.floor((Math.random() - 0.5) * 120));
-
-      btnNo.style.position = 'relative';
-      btnNo.style.left = `${randX - 40}px`;
-      btnNo.style.top = `${randY}px`;
-    }
-
-    btnNo.addEventListener('mouseenter', moveNoButton);
-    btnNo.addEventListener('touchstart', (e) => {
+    // --- 5. Interactive Blessing Submission ---
+    function handleSendBlessing(e) {
       e.preventDefault();
-      moveNoButton();
-    });
-    btnNo.addEventListener('click', moveNoButton);
+      const name = document.getElementById('guestNameInput').value.trim();
+      const wish = document.getElementById('guestWishInput').value.trim();
+      if (!name || !wish) return;
 
-    // Yes Button Click Celebration
-    btnYes.addEventListener('click', () => {
-      successOverlay.style.display = 'flex';
-      triggerConfetti(120);
-      playSoftPluck(523.25, 2.0);
-      setTimeout(() => playSoftPluck(659.25, 2.0), 200);
-      setTimeout(() => playSoftPluck(783.99, 2.5), 400);
-    });
+      const wishesWall = document.getElementById('wishesWall');
+      const bubble = document.createElement('div');
+      bubble.className = 'wish-bubble';
+      bubble.innerHTML = `
+        <div class="wish-sender">${escapeHTML(name)}</div>
+        <div class="wish-text">${escapeHTML(wish)} 🌹</div>
+      `;
+      wishesWall.prepend(bubble);
 
-    function closeSuccess() {
-      successOverlay.style.display = 'none';
+      // Trigger Celebration Flower Rain
+      triggerFlowerRain(80);
+
+      // Reset form
+      document.getElementById('blessingForm').reset();
+      alert(`Dhanyawad ${name}! Aapka aashirwad safalta-purvak jud gaya hai! 🌸`);
     }
 
-    // Love Coupons Redeem logic
-    function redeemCoupon(card, title) {
-      if (!card.classList.contains('redeemed')) {
-        card.classList.add('redeemed');
-        card.querySelector('.coupon-status').textContent = '✅ Redeemed with Love!';
-        card.querySelector('.coupon-status').style.color = '#15803d';
-        triggerMiniHeart(card);
-        alert(`Yay! "${title}" coupon redeemed! Yeh promise ab locked ho gaya hai mere pyare se bache ke liye! ❤️`);
-      }
+    function escapeHTML(str) {
+      return str.replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+      );
     }
 
-    // Mini Heart Burst Effect
-    function triggerMiniHeart(elem) {
-      const rect = elem.getBoundingClientRect();
-      for (let i = 0; i < 6; i++) {
-        const heart = document.createElement('div');
-        heart.innerHTML = '❤️';
-        heart.style.position = 'fixed';
-        heart.style.left = (rect.left + rect.width / 2) + 'px';
-        heart.style.top = (rect.top + rect.height / 2) + 'px';
-        heart.style.fontSize = (Math.random() * 12 + 16) + 'px';
-        heart.style.pointerEvents = 'none';
-        heart.style.zIndex = '9999';
-        heart.style.transition = 'all 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
-        document.body.appendChild(heart);
-
-        const destX = (Math.random() - 0.5) * 120;
-        const destY = -Math.random() * 100 - 30;
-
-        setTimeout(() => {
-          heart.style.transform = `translate(${destX}px, ${destY}px) scale(0)`;
-          heart.style.opacity = '0';
-        }, 20);
-
-        setTimeout(() => heart.remove(), 850);
-      }
-    }
-
-    // Confetti Fireworks Engine
-    function triggerConfetti(count = 80) {
-      const colors = ['#ff4d6d', '#ff758f', '#ffccd5', '#f59e0b', '#10b981', '#3b82f6'];
-      for (let i = 0; i < count; i++) {
-        const conf = document.createElement('div');
-        conf.style.position = 'fixed';
-        conf.style.left = '50%';
-        conf.style.top = '50%';
-        conf.style.width = (Math.random() * 8 + 6) + 'px';
-        conf.style.height = (Math.random() * 8 + 6) + 'px';
-        conf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        conf.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
-        conf.style.pointerEvents = 'none';
-        conf.style.zIndex = '99999';
-        conf.style.transition = 'all 1.4s cubic-bezier(0.1, 0.8, 0.3, 1)';
-        document.body.appendChild(conf);
-
-        const angle = Math.random() * Math.PI * 2;
-        const velocity = Math.random() * 320 + 80;
-        const destX = Math.cos(angle) * velocity;
-        const destY = Math.sin(angle) * velocity;
-
-        setTimeout(() => {
-          conf.style.transform = `translate(${destX}px, ${destY}px) rotate(${Math.random() * 720}deg)`;
-          conf.style.opacity = '0';
-        }, 20);
-
-        setTimeout(() => conf.remove(), 1500);
-      }
+    // --- 6. Add to Google Calendar Helper ---
+    function addToCalendar(title, location, startTimeISO) {
+      const start = startTimeISO.replace(/[-:]/g, '');
+      const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${start}/${start}&location=${encodeURIComponent(location)}&details=${encodeURIComponent('Royal Wedding Ceremony & Celebrations. Cordially invited!')}`;
+      window.open(googleCalUrl, '_blank');
     }
   </script>
+
 </body>
 </html>
