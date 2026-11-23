@@ -1,28 +1,36 @@
-# 👑 Royal Rajasthani Wedding Invitation | Pradeep Kumar & Sangeeta Gadwal
+# 🚩 शुभ विवाह निमंत्रण पत्र (कंकू पत्री)
 
-An ultra-luxurious, heritage-inspired digital wedding invitation website crafted in **Royal Rajasthani Heritage Style** with a rich **Ivory Cream & Antique Gold** palette accented with royal maroon and emerald highlights.
+राजस्थान की पारंपरिक कंकू पत्री के आधार पर निर्मित विशुद्ध हिंदी डिजिटल विवाह निमंत्रण वेबसाइट।
 
 ---
 
-## 🌟 Royal Vivah Details
+## 📜 निमंत्रण पत्र विवरण (Physical Card Details)
 
-1. **💑 Couple**:
-   - **Groom**: Pradeep Kumar
-   - **Bride**: Sangeeta Gadwal
-   - **Hosts**: The Gadhwal & Kumar Families
+1. **🕉️ मंगलाचरण**:
+   - `!! श्री गणेशाय नमः !!`
+   - `वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥`
+   - पारंपरिक भगवान श्री गणेश रेखाचित्र।
 
-2. **📅 Date & Time**:
-   - **Auspicious Date**: Friday, 11th December 2026 (11/12/2026)
-   - **Muhurtham / Shubh Vivah**: Evening 6:00 PM onwards
-   - **Royal Reception & Preeti Bhoj**: Evening 7:30 PM onwards
+2. **💑 वर एवं वधु**:
+   - **आयुष्मति संगीता**
+   - **संग**
+   - **आयुष्मान् प्रदीप**
 
-3. **📍 Venue**:
-   - **Captain Lal Chand Gadhwal Farm House**
-   - 1-Click Google Maps navigation & Add to Google Calendar
+3. **📅 शुभ कार्यक्रम**:
+   - **सवामणी (प्रसाद)**:
+     - दिनांक: **07 दिसम्बर 2026, सोमवार**
+     - समय: **प्रातः 10.15 बजे से**
+   - **शुभ विवाह**:
+     - दिनांक: **11 दिसम्बर 2026, शुक्रवार**
+     - समय: **सायं 6:00 बजे से**
 
-4. **🌸 Ambiance & Features**:
-   - Rajputana Palace Jharokha Arch with Lord Ganesha Emblem & Sanskrit Shloka.
-   - Falling rose and marigold petals on HTML5 canvas.
-   - Authentic royal Shehnai & Sitar synthesizer ambiance.
-   - Real-time countdown clock to 11th December 2026, 6:00 PM.
-   - Designer details on border: **Suavasar Invites** (`+91 96891 92288`).
+4. **🚩 प्रेषक एवं पता**:
+   - **कैप्टेन लालचन्द गढ़वाल**
+   - मु. पो. : गढ़वालों की ढाणी, छावसरी
+   - तहसील : गुढ़ागौड़जी, जिला : झुंझुनूं (राजस्थान)
+   - मो. : **9828494313, 7665973922**
+   - **गूगल मैप्स लोकेशन**: कैप्टन लालचन्द गढ़वाल फार्म हाउस, छावसरी
+
+5. **💌 स्नेहभरा निमंत्रण**:
+   - `श्रीमान् [अतिथि नाम]`
+   - `गढ़वाल परिवार का स्नेहभरा निमंत्रण`
