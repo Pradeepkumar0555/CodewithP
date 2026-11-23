@@ -14,7 +14,10 @@ An ultra-luxurious, heritage-inspired digital wedding invitation website crafted
    - **Base**: Royal Ivory Cream (`#FAF5EB`, `#FEFDF9`) with subtle heritage mandala jaali patterns.
    - **Accents**: Antique Royal Gold (`#C59336`, `#E7BD5B`), Regal Maroon/Crimson (`#751422`, `#5A0C18`), and Emerald Green (`#1D4331`).
 
-3. **📜 Ceremony Itinerary & Cards**:
+3. **💑 Royal Couple & Parentage**:
+   - The Royal Groom & The Royal Bride with parents' names and host family banner.
+
+4. **📜 Ceremony Itinerary & Cards**:
    - **Shubh Muhurtham / Vivah Sanskar**:
      - *Date*: Wednesday, 11th May 20XX | 9:30 AM onwards
      - *Venue*: Hotel Name Here, Address Here
@@ -24,23 +27,18 @@ An ultra-luxurious, heritage-inspired digital wedding invitation website crafted
      - *Venue*: Hotel Name Here, Address Here
      - *Actions*: 1-click Google Maps location & Add to Google Calendar.
 
-4. **🌸 Falling Rose & Marigold Petals (Canvas Engine)**:
+5. **🌸 Falling Rose & Marigold Petals (Canvas Engine)**:
    - High-performance, lightweight 60 FPS HTML5 Canvas simulation of gentle falling royal red roses and festive marigold petals with rotation and flutter physics.
-   - Interactive *"Shower Royal Rose Petals"* burst button.
 
-5. **🎺 Authentic Royal Shehnai & Sitar Ambiance**:
+6. **🎺 Authentic Royal Shehnai & Sitar Ambiance**:
    - Built-in sound synthesizer using the browser's native **Web Audio API** (Raga Yaman / Bilawal notes with warm harmonic tanpura drone).
    - Zero external audio files or broken links.
 
-6. **⏳ Live Auspicious Day Countdown**:
+7. **⏳ Live Auspicious Day Countdown**:
    - Real-time countdown clock tracking Days, Hours, Minutes, and Seconds to the sacred Muhurtham.
 
-7. **💌 Interactive Guestbook (Shubh Aashirwad)**:
-   - Guests can write their heartfelt blessings and submit them to a live wishes wall, triggering celebratory petal showers.
-
-8. **📱 WhatsApp Sharing & Designer Credits**:
-   - 1-tap WhatsApp sharing link with customized invitation text.
-   - Designer details: **Suavasar Invites** (`+91 96891 92288`).
+8. **🏷️ Designer Credits**:
+   - Designer details on border: **Suavasar Invites** (`+91 96891 92288`).
 
 ---
 
@@ -51,9 +49,3 @@ You can customize the card for different families or preview real names directly
 ```text
 index.html?groom=Vikramaditya&bride=Ananya&hosts=Rathore+Family
 ```
-
-- `groom`: Custom Groom Name
-- `bride`: Custom Bride Name
-- `hosts`: Family hosting the wedding
-- `gparents`: Groom's Parents Details
-- `bparents`: Bride's Parents Details
