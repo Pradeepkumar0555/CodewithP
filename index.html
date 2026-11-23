@@ -10,6 +10,7 @@
   <!-- Open Graph for Social Sharing -->
   <meta property="og:title" content="॥ शुभ विवाह निमंत्रण ॥ संगीता संग प्रदीप">
   <meta property="og:description" content="गढ़वाल परिवार का स्नेहभरा निमंत्रण - आयुष्मति संगीता संग आयुष्मान् प्रदीप | 11 दिसम्बर 2026, कैप्टन लालचन्द गढ़वाल फार्म हाउस, झुंझुनूं।">
+  <meta property="og:image" content="couple.jpg">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts: Authentic Traditional Hindi Calligraphy & Rajasthani Fonts -->
@@ -314,49 +315,49 @@
     }
 
     /* ==========================================================================
-       GUEST HONOR BOX (श्रीमान् / स्नेहभरा निमंत्रण)
+       ROYAL COUPLE PORTRAIT FRAME
        ========================================================================== */
-    .shriman-guest-box {
-      background: #fff;
-      border: 1.5px solid var(--kumkum-red);
-      border-radius: 16px;
-      padding: 22px 18px;
-      max-width: 540px;
-      margin: 22px auto 26px;
-      text-align: left;
-      position: relative;
-      box-shadow: 0 4px 14px rgba(158, 27, 39, 0.05);
-    }
-
-    .shriman-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--kumkum-red);
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .guest-line {
-      height: 28px;
-      border-bottom: 1px dashed var(--kumkum-red);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      color: #3b181c;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 600;
-      padding-left: 6px;
-    }
-
-    .invitation-declaration {
+    .couple-photo-frame {
+      margin: 20px auto 26px;
+      max-width: 440px;
       text-align: center;
-      margin-top: 14px;
+      position: relative;
+    }
+
+    .photo-arch-border {
+      position: relative;
+      padding: 7px;
+      background: linear-gradient(135deg, #c49233 0%, #faecd0 50%, #8e1722 100%);
+      border-radius: 200px 200px 20px 20px;
+      box-shadow: 0 14px 36px rgba(120, 15, 25, 0.18);
+      display: inline-block;
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .photo-arch-border:hover {
+      transform: scale(1.02);
+      box-shadow: 0 18px 45px rgba(120, 15, 25, 0.28);
+    }
+
+    .couple-photo {
+      width: 100%;
+      max-width: 360px;
+      height: 440px;
+      object-fit: cover;
+      object-position: center 15%;
+      border-radius: 193px 193px 14px 14px;
+      display: block;
+      border: 3px solid #fff;
+    }
+
+    .photo-caption {
+      margin-top: 10px;
       font-size: 1.35rem;
       color: var(--kumkum-red);
       font-weight: 700;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 2px rgba(158, 27, 39, 0.1);
     }
 
     /* ==========================================================================
@@ -692,20 +693,13 @@
         </svg>
       </div>
 
-      <!-- Guest Honor Box (श्रीमान् ...) -->
-      <div class="shriman-guest-box">
-        <div class="shriman-header">
-          <span>श्रीमान्</span>
-          <span style="font-size: 0.95rem; font-weight: normal; color: var(--text-muted);">(सपरिवार सादर आमंत्रित)</span>
+      <!-- Royal Couple Portrait Frame -->
+      <div class="couple-photo-frame">
+        <div class="photo-arch-border">
+          <img src="couple.jpg" alt="आयुष्मति संगीता एवं आयुष्मान् प्रदीप" class="couple-photo" id="coupleImg" onerror="this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80'">
         </div>
-        <div class="guest-line" id="guestPersonalizedLine">
-          <!-- Guest Name can be passed in URL ?to=Name -->
-        </div>
-        <div class="guest-line"></div>
-        <div class="guest-line"></div>
-
-        <div class="invitation-declaration">
-          गढ़वाल परिवार का स्नेहभरा निमंत्रण
+        <div class="photo-caption">
+          ॥ शुभ परिणय सूत्र ॥
         </div>
       </div>
 
@@ -825,16 +819,7 @@
        INTERACTIVE JAVASCRIPT: PETALS, AUDIO & COUNTDOWN
        ==================================================================== -->
   <script>
-    // --- 1. Personalized Guest Name via URL (?to=Name or ?atithi=Name) ---
-    (function initGuestName() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const guest = urlParams.get('to') || urlParams.get('atithi') || urlParams.get('name');
-      if (guest) {
-        document.getElementById('guestPersonalizedLine').textContent = guest;
-      }
-    })();
-
-    // --- 2. Falling Petals (Canvas Animation) ---
+    // --- 1. Falling Petals (Canvas Animation) ---
     const canvas = document.getElementById('petalCanvas');
     const ctx = canvas.getContext('2d');
     let width = canvas.width = window.innerWidth;
